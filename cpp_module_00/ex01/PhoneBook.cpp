@@ -6,7 +6,16 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/28 21:19:53 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/30 17:35:55 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook(void)
+{
+}
+
+PhoneBook::~PhoneBook(void)
+{
+}
