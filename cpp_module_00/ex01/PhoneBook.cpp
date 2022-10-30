@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/30 23:13:18 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/30 23:27:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	PhoneBook::searchContact(void)
 	{
 		int index = input[0] - '0';
 		if (index < this->_contactCount)
-			this->_contacts[index].printContact();
+			this->_contacts[index].printAll();
 		else
 			std::cout << "Invalid index" << std::endl;
 	}
