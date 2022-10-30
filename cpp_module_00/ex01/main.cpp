@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:22:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/30 23:13:38 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 00:07:35 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ int	main(void)
 {
 	PhoneBook phoneBook;
 
-	while (1337)
+	while (true)
 	{
 		std::string input;
-		std::cout << "Enter a command: ";
-		std::getline(std::cin, input);
+		while (input.empty())
+		{
+			std::cout << "Enter a command: ";
+			std::getline(std::cin, input);
+		}
 		if (input == "ADD")
 			phoneBook.addContact();
 		else if (input == "SEARCH")

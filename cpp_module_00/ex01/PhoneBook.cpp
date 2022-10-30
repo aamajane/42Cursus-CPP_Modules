@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/30 23:27:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 00:49:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	PhoneBook::searchContact(void)
 	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
 	for (int i = 0; i < this->_contactCount; i++)
 	{
-		std::cout << "         " << i << "|";
+		std::cout << std::setw(10) << i << "|";
 		this->_contacts[i].printContact();
 	}
 	std::cout << "Enter the index of the contact you want to see: ";

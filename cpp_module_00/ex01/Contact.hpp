@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/30 23:27:05 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 00:47:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 class Contact
 {

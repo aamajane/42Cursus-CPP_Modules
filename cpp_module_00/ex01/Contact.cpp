@@ -6,24 +6,15 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 00:01:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 00:49:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(void)
-{
-	this->_firstName = "";
-	this->_lastName = "";
-	this->_nickname = "";
-	this->_phoneNumber = "";
-	this->_darkestSecret = "";
-}
+Contact::Contact(void) {}
 
-Contact::~Contact(void)
-{
-}
+Contact::~Contact(void) {}
 
 void	Contact::addContact(void)
 {
@@ -56,7 +47,19 @@ void	Contact::addContact(void)
 
 void	Contact::printContact(void)
 {
-	
+	if (this->_firstName.length() > 10)
+		std::cout << this->_firstName.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->_firstName << "|";
+	if (this->_lastName.length() > 10)
+		std::cout << this->_lastName.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->_lastName << "|";
+	if (this->_nickname.length() > 10)
+		std::cout << this->_nickname.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->_nickname << "|";
+	std::cout << std::endl;
 }
 
 void	Contact::printAll(void)
