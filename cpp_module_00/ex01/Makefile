@@ -6,7 +6,7 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 20:57:22 by aamajane          #+#    #+#              #
-#    Updated: 2022/10/28 21:23:09 by aamajane         ###   ########.fr        #
+#    Updated: 2022/10/30 20:59:28 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	phonebook
 
 SRCS	=	main.cpp \
 			PhoneBook.cpp \
-			Contact.cpp \
+			Contact.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
