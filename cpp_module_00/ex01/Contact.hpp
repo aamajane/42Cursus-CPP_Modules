@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 00:47:57 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:03:07 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,8 @@
 class Contact
 {
 	private:
-		std::string _firstName;
-		std::string _lastName;
-		std::string _nickname;
-		std::string _phoneNumber;
-		std::string _darkestSecret;
+		std::string _preData[5];
+		std::string _data[5];
 	public:
 		Contact(void);
 		~Contact(void);
