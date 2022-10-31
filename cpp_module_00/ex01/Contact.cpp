@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 01:06:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:16:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,11 @@ void	Contact::printContact(void)
 	for (int i = 0; i < 3; i++)
 	{
 		if (this->_data[i].length() > 10)
-			std::cout << this->_data[i].substr(0, 9) << ".|";
+			std::cout << this->_data[i].substr(0, 9) << ".";
 		else
-			std::cout << std::setw(10) << this->_data[i] << "|";
+			std::cout << std::setw(10) << this->_data[i];
+		if (i < 2)
+			std::cout << "|";
 	}
 	std::cout << std::endl;
 }

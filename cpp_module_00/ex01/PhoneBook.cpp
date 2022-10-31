@@ -6,12 +6,11 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 00:49:54 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:15:08 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <iostream>
 
 PhoneBook::PhoneBook(void)
 {
