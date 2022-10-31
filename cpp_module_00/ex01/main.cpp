@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:22:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 00:07:35 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/10/31 20:12:09 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(void)
 		else if (input == "SEARCH")
 			phoneBook.searchContact();
 		else if (input == "EXIT")
-			break ;
+			break;
 		else
 			std::cout << "Invalid command" << std::endl;
 	}
