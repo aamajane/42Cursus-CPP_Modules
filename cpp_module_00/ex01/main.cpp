@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:22:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 20:12:09 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/01 00:53:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int	main(void)
 		else
 			std::cout << "Invalid command" << std::endl;
 	}
-	return (EXIT_SUCCESS);
+	return 0;
 }

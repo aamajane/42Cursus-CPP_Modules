@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 22:06:28 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/26 22:12:19 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/01 00:53:29 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	main(int ac, char **av)
 				std::cout << (char)toupper(av[i][j]);
 	}
 	std::cout << std::endl;
-	return (EXIT_SUCCESS);
+	return 0;
 }
