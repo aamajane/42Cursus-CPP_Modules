@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/01 21:25:06 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 00:36:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 PhoneBook::PhoneBook(void)
 {
 	std::cout << "***** Welcome to the PhoneBook *****" << std::endl;
-	this->_contactCount = 0;
-	this->_contactIndex = 0;
+	_contactCount = 0;
+	_contactIndex = 0;
 }
 
 PhoneBook::~PhoneBook(void)
@@ -26,26 +26,26 @@ PhoneBook::~PhoneBook(void)
 
 void	PhoneBook::addContact(void)
 {
-	this->_contacts[this->_contactIndex].addContact();
-	this->_contactIndex++;
-	if (this->_contactIndex == 8)
-		this->_contactIndex = 0;
-	if (this->_contactCount < 8)
-		this->_contactCount++;
+	_contacts[_contactIndex].addContact();
+	_contactIndex++;
+	if (_contactIndex == 8)
+		_contactIndex = 0;
+	if (_contactCount < 8)
+		_contactCount++;
 }
 
 void	PhoneBook::searchContact(void)
 {
-	if (this->_contactCount == 0)
+	if (_contactCount == 0)
 	{
 		std::cout << "PhoneBook is empty" << std::endl;
 		return;
 	}
 	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
-	for (int i = 0; i < this->_contactCount; i++)
+	for (int i = 0; i < _contactCount; i++)
 	{
 		std::cout << std::setw(10) << i << "|";
-		this->_contacts[i].printContact();
+		_contacts[i].printContact();
 	}
 	std::cout << "Enter the index of the contact you want to see: ";
 	std::string input;
@@ -53,8 +53,8 @@ void	PhoneBook::searchContact(void)
 	if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
 	{
 		int index = input[0] - '0';
-		if (index < this->_contactCount)
-			this->_contacts[index].printAll();
+		if (index < _contactCount)
+			_contacts[index].printAll();
 		else
 			std::cout << "Invalid index" << std::endl;
 	}

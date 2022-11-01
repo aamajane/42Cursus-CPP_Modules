@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 00:13:34 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 00:36:25 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 Contact::Contact(void)
 {
-	this->_preData[0] = "First name: ";
-	this->_preData[1] = "Last name: ";
-	this->_preData[2] = "Nickname: ";
-	this->_preData[3] = "Phone number: ";
-	this->_preData[4] = "Darkest secret: ";
+	_preData[0] = "First name: ";
+	_preData[1] = "Last name: ";
+	_preData[2] = "Nickname: ";
+	_preData[3] = "Phone number: ";
+	_preData[4] = "Darkest secret: ";
 }
 
 void	Contact::addContact(void)
 {
 	for (int i = 0; i < 5; i++)
 	{
-		this->_data[i].clear();
-		while (this->_data[i].empty())
+		_data[i].clear();
+		while (_data[i].empty())
 		{
-			std::cout << this->_preData[i];
-			std::getline(std::cin, this->_data[i]);
+			std::cout << _preData[i];
+			std::getline(std::cin, _data[i]);
 		}
 	}
 }
@@ -38,10 +38,10 @@ void	Contact::printContact(void)
 {
 	for (int i = 0; i < 3; i++)
 	{
-		if (this->_data[i].length() > 10)
-			std::cout << this->_data[i].substr(0, 9) << ".";
+		if (_data[i].length() > 10)
+			std::cout << _data[i].substr(0, 9) << ".";
 		else
-			std::cout << std::setw(10) << this->_data[i];
+			std::cout << std::setw(10) << _data[i];
 		if (i < 2)
 			std::cout << "|";
 	}
@@ -51,5 +51,5 @@ void	Contact::printContact(void)
 void	Contact::printAll(void)
 {
 	for (int i = 0; i < 5; i++)
-		std::cout << this->_preData[i] << this->_data[i] << std::endl;
+		std::cout << _preData[i] << _data[i] << std::endl;
 }
