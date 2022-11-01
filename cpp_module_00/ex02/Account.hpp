@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 21:27:06 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 22:16:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/01 01:22:06 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ class Account
 
 			static void	_displayTimestamp(void);
 
-			int			_accountIndex;
-			int			_amount;
-			int			_nbDeposits;
-			int			_nbWithdrawals;
+			int	_accountIndex;
+			int	_amount;
+			int	_nbDeposits;
+			int	_nbWithdrawals;
 			
 			Account(void);
 
@@ -36,14 +36,14 @@ class Account
 
 			typedef Account		t;
 
+			Account(int initial_deposit);
+			~Account(void);
+			
 			static int	getNbAccounts(void);
 			static int	getTotalAmount(void);
 			static int	getNbDeposits(void);
 			static int	getNbWithdrawals(void);
 			static void	displayAccountsInfos(void);
-
-			Account(int initial_deposit);
-			~Account(void);
 
 			void	makeDeposit(int deposit);
 			bool	makeWithdrawal(int withdrawal);

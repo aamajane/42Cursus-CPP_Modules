@@ -6,17 +6,16 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 21:36:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/10/31 22:16:15 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/01 01:07:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <vector>
-#include <iostream>
 #include <algorithm>
 #include <functional>
 #include "Account.hpp"
 
-int	main( void )
+int	main(void)
 {
 	typedef std::vector<Account::t>							  accounts_t;
 	typedef std::vector<int>								  ints_t;
@@ -44,9 +43,9 @@ int	main( void )
 	std::for_each(acc_begin, acc_end, std::mem_fun_ref(&Account::displayStatus));
 
 	for (acc_int_t it(acc_begin, dep_begin);
-		  it.first != acc_end && it.second != dep_end;
-		  ++(it.first), ++(it.second) ) {
-
+		 it.first != acc_end && it.second != dep_end;
+		 ++(it.first), ++(it.second)) 
+	{
 		(*(it.first)).makeDeposit(*(it.second));
 	}
 
@@ -54,9 +53,9 @@ int	main( void )
 	std::for_each(acc_begin, acc_end, std::mem_fun_ref(&Account::displayStatus));
 
 	for (acc_int_t it(acc_begin, wit_begin);
-		  it.first != acc_end && it.second != wit_end;
-		  ++(it.first), ++(it.second) ) {
-
+		 it.first != acc_end && it.second != wit_end;
+		 ++(it.first), ++(it.second))
+	{
 		(*(it.first)).makeWithdrawal(*(it.second));
 	}
 
