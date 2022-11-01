@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/01 21:25:51 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 00:13:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ Contact::Contact(void)
 	this->_preData[3] = "Phone number: ";
 	this->_preData[4] = "Darkest secret: ";
 }
-
-Contact::~Contact(void) {}
 
 void	Contact::addContact(void)
 {

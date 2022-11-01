@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/01 21:25:54 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 00:15:37 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define CONTACT_HPP
 
 #include <iostream>
-#include <string>
 #include <iomanip>
 
 class Contact
@@ -25,7 +24,6 @@ class Contact
 
 	public:
 		Contact(void);
-		~Contact(void);
 
 		void	addContact(void);
 		void	printContact(void);
