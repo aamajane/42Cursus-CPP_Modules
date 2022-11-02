@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:18:20 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 01:56:29 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 02:18:02 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount << ";";
-	if (_amount < withdrawal)
+	if (withdrawal > _amount)
 	{
 		std::cout << "withdrawal:refused" << std::endl;
 		return false;
