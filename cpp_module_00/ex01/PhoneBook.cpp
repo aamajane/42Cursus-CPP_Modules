@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 00:36:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:10:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ PhoneBook::~PhoneBook(void)
 
 void	PhoneBook::addContact(void)
 {
-	_contacts[_contactIndex].addContact();
-	_contactIndex++;
+	_contacts[_contactIndex++].addContact();
 	if (_contactIndex == 8)
 		_contactIndex = 0;
 	if (_contactCount < 8)
