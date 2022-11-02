@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:18:20 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 21:01:51 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:05:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,6 @@ void	Account::_displayTimestamp(void)
 
 Account::Account(void) {}
 
-Account::Account(int initial_deposit)
-{
-	static int	index = 0;
-	_accountIndex = index++;
-	_amount = initial_deposit;
-	_nbDeposits = 0;
-	_nbWithdrawals = 0;
-	_totalAmount += _amount;
-	_nbAccounts++;
-	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";";
-	std::cout << "amount:" << _amount << ";";
-	std::cout << "created" << std::endl;
-}
-
-Account::~Account(void)
-{
-	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";";
-	std::cout << "amount:" << _amount << ";";
-	std::cout << "closed" << std::endl;
-}
-
 int	Account::getNbAccounts(void)
 {
 	return _nbAccounts;
@@ -85,6 +62,29 @@ void	Account::displayAccountsInfos(void)
 	std::cout << "total:" << _totalAmount << ";";
 	std::cout << "deposits:" << _totalNbDeposits << ";";
 	std::cout << "withdrawals:" << _totalNbWithdrawals << std::endl;
+}
+
+Account::Account(int initial_deposit)
+{
+	static int	index = 0;
+	_accountIndex = index++;
+	_amount = initial_deposit;
+	_nbDeposits = 0;
+	_nbWithdrawals = 0;
+	_totalAmount += _amount;
+	_nbAccounts++;
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";";
+	std::cout << "amount:" << _amount << ";";
+	std::cout << "created" << std::endl;
+}
+
+Account::~Account(void)
+{
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";";
+	std::cout << "amount:" << _amount << ";";
+	std::cout << "closed" << std::endl;
 }
 
 void	Account::makeDeposit(int deposit)
