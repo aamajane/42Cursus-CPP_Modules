@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:18:20 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 21:08:54 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:14:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,11 @@ Account::Account(void) {}
 
 Account::Account(int initial_deposit)
 {
-	static int	index = 0;
-	_accountIndex = index++;
+	_accountIndex = _nbAccounts++;
 	_amount = initial_deposit;
 	_nbDeposits = 0;
 	_nbWithdrawals = 0;
 	_totalAmount += _amount;
-	_nbAccounts++;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "amount:" << _amount << ";";
