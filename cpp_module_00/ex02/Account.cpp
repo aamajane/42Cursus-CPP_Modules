@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:18:20 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 02:18:02 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/02 20:53:35 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	Account::makeDeposit(int deposit)
 	std::cout << "deposit:" << deposit << ";";
 	_amount += deposit;
 	_totalAmount += deposit;
-	_nbDeposits = 1;
+	_nbDeposits++;
 	_totalNbDeposits++;
 	std::cout << "amount:" << _amount << ";";
 	std::cout << "nb_deposits:" << _nbDeposits << std::endl;
@@ -115,7 +115,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	{
 		_amount -= withdrawal;
 		_totalAmount -= withdrawal;
-		_nbWithdrawals = 1;
+		_nbWithdrawals++;
 		_totalNbWithdrawals++;
 		std::cout << "withdrawal:" << withdrawal << ";";
 		std::cout << "amount:" << _amount << ";";
