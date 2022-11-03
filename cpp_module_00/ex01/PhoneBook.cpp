@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 22:10:57 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/03 23:22:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void	PhoneBook::searchContact(void)
 	std::cout << "Enter the index of the contact you want to see: ";
 	std::string input;
 	std::getline(std::cin, input);
+	if (std::cin.eof())
+		exit(0);
 	if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
 	{
 		int index = input[0] - '0';

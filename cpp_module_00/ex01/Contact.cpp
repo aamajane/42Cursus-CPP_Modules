@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 00:36:25 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/03 23:22:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	Contact::addContact(void)
 		{
 			std::cout << _preData[i];
 			std::getline(std::cin, _data[i]);
+			if (std::cin.eof())
+				exit(0);
 		}
 	}
 }
