@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 22:06:28 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/01 00:53:29 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/05 19:54:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@ int	main(int ac, char **av)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
+		std::string str;
 		for (int i = 1; i < ac; i++)
-			for (int j = 0; av[i][j]; j++)
-				std::cout << (char)toupper(av[i][j]);
+		{
+			str = av[i];
+			for (int j = 0; str[j]; j++)
+				std::cout << (char)toupper(str[j]);
+		}
 	}
 	std::cout << std::endl;
 	return 0;
