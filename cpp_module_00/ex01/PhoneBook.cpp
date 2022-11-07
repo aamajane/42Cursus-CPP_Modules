@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/05 19:58:50 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:13:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void	PhoneBook::searchContact(void)
 				_contacts[index].printAll();
 			}
 			else
-				std::cout << "Invalid index" << std::endl;
+				std::cerr << "Invalid index" << std::endl;
 		}
 		else
-			std::cout << "Invalid index" << std::endl;
+			std::cerr << "Invalid index" << std::endl;
 	}
 }
