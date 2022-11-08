@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/07 15:13:20 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/08 23:00:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ PhoneBook::~PhoneBook(void)
 	std::cout << "***** Thank you for using the PhoneBook *****" << std::endl;
 }
 
-void	PhoneBook::addContact(void)
+void PhoneBook::addContact(void)
 {
 	_contacts[_contactIndex++].addContact();
 	if (_contactIndex == 8)
@@ -33,7 +33,7 @@ void	PhoneBook::addContact(void)
 		_contactCount++;
 }
 
-void	PhoneBook::searchContact(void)
+void PhoneBook::searchContact(void)
 {
 	if (_contactCount == 0)
 	{

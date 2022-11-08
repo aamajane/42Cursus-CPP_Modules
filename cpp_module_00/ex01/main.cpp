@@ -6,16 +6,15 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:22:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/07 15:13:07 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:59:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-int	main(void)
+int main(void)
 {
 	PhoneBook phoneBook;
-
 	while (true)
 	{
 		std::string input;

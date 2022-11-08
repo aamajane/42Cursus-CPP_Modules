@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/02 00:15:37 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:59:09 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ class Contact
 
 	public:
 		Contact(void);
-
-		void	addContact(void);
-		void	printContact(void);
-		void	printAll(void);
+		void addContact(void);
+		void printContact(void);
+		void printAll(void);
 };
 
 #endif

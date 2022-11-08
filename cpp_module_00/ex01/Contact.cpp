@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/04 23:46:33 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:58:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Contact::Contact(void)
 	_preData[4] = "Darkest secret: ";
 }
 
-void	Contact::addContact(void)
+void Contact::addContact(void)
 {
 	for (int i = 0; i < 5; i++)
 	{
@@ -36,7 +36,7 @@ void	Contact::addContact(void)
 	}
 }
 
-void	Contact::printContact(void)
+void Contact::printContact(void)
 {
 	for (int i = 0; i < 3; i++)
 	{
@@ -50,7 +50,7 @@ void	Contact::printContact(void)
 	std::cout << std::endl;
 }
 
-void	Contact::printAll(void)
+void Contact::printAll(void)
 {
 	for (int i = 0; i < 5; i++)
 		std::cout << _preData[i] << _data[i] << std::endl;
