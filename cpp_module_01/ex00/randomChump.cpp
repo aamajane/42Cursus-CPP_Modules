@@ -6,15 +6,15 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 23:00:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/08 22:10:14 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:52:46 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	randomChump(std::string name)
+void randomChump(std::string name)
 {
-	Zombie	zombie;
+	Zombie zombie;
 	zombie.setName(name);
 	zombie.announce();
 }
