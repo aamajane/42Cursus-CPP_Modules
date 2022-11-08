@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 23:21:35 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/07 23:24:02 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/08 21:40:59 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int	main(void)
 	zombie->announce();
 	delete zombie;
 	randomChump("Stack_Zombie");
-	return (0);
+	return 0;
 }
