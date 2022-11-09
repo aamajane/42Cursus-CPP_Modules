@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:58:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/09 20:27:58 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/09 20:38:04 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class HumanA
 
 	public:
 		HumanA(std::string name, Weapon& weapon);
-		~HumanA();
 		void attack();
 };
 
