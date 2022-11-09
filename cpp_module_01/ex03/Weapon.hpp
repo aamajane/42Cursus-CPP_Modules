@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 23:43:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/09 14:26:13 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/09 20:34:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Weapon
 	public:
 		Weapon(std::string type);
 		~Weapon();
-		std::string& getType();
+		const std::string& getType() const;
 		void setType(std::string type);
 };
 

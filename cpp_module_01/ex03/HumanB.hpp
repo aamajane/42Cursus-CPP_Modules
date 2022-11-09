@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:10:32 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/09 14:33:51 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/09 20:35:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class HumanB
 	public:
 		HumanB(std::string name);
 		~HumanB();
-		void setWeapon(Weapon weapon);
+		void setWeapon(Weapon& weapon);
 		void attack();
 };
 
