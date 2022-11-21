@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:06 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/21 13:18:14 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:35:10 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ class FileClass
 		
 
 	public:
-		
+		FileClass();
+		~FileClass();
 };
 
 #endif
