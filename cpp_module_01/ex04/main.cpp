@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:03 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/23 21:32:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:35:38 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int main(int ac, char **av)
 		std::string s1 = av[2];
 		std::string s2 = av[3];
 		std::ifstream file(filename);
-		std::ofstream newFile(filename + "replace");
-		std::string line;
 		if(file.is_open())
 		{
+			std::ofstream newFile(filename + "replace");
+			std::string line;
 			while (std::getline(file, line))
 			{
 				if (line.find(s1) != std::string::npos)
