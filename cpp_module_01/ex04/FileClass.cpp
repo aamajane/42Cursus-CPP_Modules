@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:08 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/23 15:15:13 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:05:36 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,13 @@ FileClass::FileClass(std::string filename, std::string s1, std::string s2)
 		std::cerr << "Error: File could not be opened" << std::endl;
 		return;
 	}
-	while (std::getline(file, line))
+	while (getline(file, line))
 	{
-		
+		while ((int)line.find(s1) != -1)
+		{
+			line.erase(line.find(s1), s1.length());
+			line.insert(line.find(s1), s2);
+		}
+		newFile << line << std::endl;
 	}
 }
