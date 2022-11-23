@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:03 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/23 21:08:29 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:09:49 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(int ac, char **av)
 		if(!file.is_open())
 		{
 			std::cerr << "Error: File could not be opened" << std::endl;
-			return;
+			return 0;
 		}
 		while (getline(file, line))
 		{
