@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:03 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/23 21:38:13 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:41:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(int ac, char **av)
 		std::ifstream file(filename);
 		if(file.is_open())
 		{
-			std::ofstream newFile(filename + "replace");
+			std::ofstream newFile(filename + ".replace");
 			std::string line;
 			while (std::getline(file, line))
 			{
