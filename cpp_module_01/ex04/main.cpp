@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:03 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/23 21:41:34 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:52:19 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 
 int main(int ac, char **av)
 {
-	if (ac != 4)
-		std::cerr << "Error: Wrong number of arguments" << std::endl;
-	else
+	if (ac == 4)
 	{
 		std::string filename = av[1];
 		std::string s1 = av[2];
@@ -41,5 +39,7 @@ int main(int ac, char **av)
 		else
 			std::cerr << "Error: File could not be opened" << std::endl;
 	}
+	else
+		std::cerr << "Error: Wrong number of arguments" << std::endl;
 	return 0;
 }
