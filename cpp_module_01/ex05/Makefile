@@ -6,11 +6,11 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 19:58:22 by aamajane          #+#    #+#              #
-#    Updated: 2022/11/24 13:37:51 by aamajane         ###   ########.fr        #
+#    Updated: 2022/11/24 13:43:07 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	program
+NAME	=	Harl
 
 SRCS	=	main.cpp \
 			Harl.cpp
