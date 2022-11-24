@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:39 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/24 19:54:44 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/24 21:31:19 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 void Harl::debug(void)
 {
-	std::cout << "DEBUG" << std::endl;
+	std::cout << "Debug comment" << std::endl;
 }
 
 void Harl::info(void)
 {
-	std::cout << "INFO" << std::endl;
+	std::cout << "Info comment" << std::endl;
 }
 
 void Harl::warning(void)
 {
-	std::cout << "WARNING" << std::endl;
+	std::cout << "Warning comment" << std::endl;
 }
 
 void Harl::error(void)
 {
-	std::cout << "ERROR" << std::endl;
+	std::cout << "Error comment" << std::endl;
 }
 
 void Harl::complain(std::string level)
 {
+	void (Harl::*harlPtr[4])(void);
 }
