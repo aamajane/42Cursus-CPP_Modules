@@ -6,13 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:43 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/24 19:55:18 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/24 20:00:16 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main()
+int main(void)
 {
 	Harl harl;
 	return 0;
