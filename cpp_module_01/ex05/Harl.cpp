@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:39 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/24 21:31:19 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:33:10 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,32 @@ void Harl::error(void)
 	std::cout << "Error comment" << std::endl;
 }
 
+int Harl::getLevel(std::string level)
+{
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == levels[i])
+			return i;
+	}
+	return -1;
+}
+
 void Harl::complain(std::string level)
 {
-	void (Harl::*harlPtr[4])(void);
+	void (Harl::*harlPtr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	switch (getLevel(level))
+	{
+		case DEBUG:
+			return (this->*harlPtr[DEBUG])();
+		case INFO:
+			return (this->*harlPtr[INFO])();
+		case WARNING:
+			return (this->*harlPtr[WARNING])();
+		case ERROR:
+			return (this->*harlPtr[ERROR])();
+		default:
+			std::cout << "Unknown comment" << std::endl;
+			break;
+	}
 }
