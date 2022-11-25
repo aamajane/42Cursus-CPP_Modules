@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:41 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/24 22:51:02 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/25 13:47:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Harl
 		void info(void);
 		void warning(void);
 		void error(void);
+		int getLevel(std::string level);
+		enum comments {DEBUG, INFO, WARNING, ERROR};
 
 	public:
 		void complain(std::string level);

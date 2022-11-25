@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:43 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/25 13:36:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/25 13:44:39 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,9 @@
 int main(int ac, char **av)
 {
 	Harl harl;
+	if (ac == 2)
+		harl.complain(av[1]);
+	else
+		std::cout << "Error: Wrong number of arguments" << std::endl;
 	return 0;
 }
