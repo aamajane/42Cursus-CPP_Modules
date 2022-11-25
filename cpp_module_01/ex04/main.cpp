@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:03 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/23 21:52:19 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/25 21:22:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,14 @@ int main(int ac, char **av)
 			std::string line;
 			while (std::getline(file, line))
 			{
-				size_t pos = line.find(s1);
-				if (pos != std::string::npos)
+				if (s1[0] && s1 != s2)
 				{
-					line.erase(pos, s1.length());
-					line.insert(pos, s2);
+					size_t pos;
+					while((pos = line.find(s1)) != std::string::npos)
+					{
+						line.erase(pos, s1.length());
+						line.insert(pos, s2);
+					}
 				}
 				newFile << line << std::endl;
 			}
