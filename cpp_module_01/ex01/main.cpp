@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 23:21:35 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/25 21:46:59 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:45:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ int main(int ac, char **av)
 				zombie[i].announce();
 			delete[] zombie;
 		}
+		else
+			std::cout << "Error: Wrong number of zombies" << std::endl;
 	}
+	else
+		std::cout << "Error: Wrong number of arguments" << std::endl;
 	return 0;
 }
