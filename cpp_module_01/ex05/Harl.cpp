@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:39 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/25 14:03:37 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/26 17:14:08 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ void Harl::complain(std::string level)
 		if (level == levels[i])
 			return (this->*harlPtr[i])();
 	}
-	std::cout << "Error: Wrong level" << std::endl;
+	std::cout << "Error: Unknown level" << std::endl;
 }
