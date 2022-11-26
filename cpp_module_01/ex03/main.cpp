@@ -6,14 +6,14 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 23:26:20 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/25 20:59:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:50:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main()
+int main(void)
 {
 	{
 		Weapon club = Weapon("crude spiked club");
