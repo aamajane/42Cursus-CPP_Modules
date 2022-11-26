@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:39 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/25 13:50:41 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/11/26 17:15:59 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void Harl::complain(std::string level)
 			error();
 			break;
 		default:
-			std::cout << "Error: Wrong level" << std::endl;
+			std::cout << "Error: Unknown level" << std::endl;
 			break;
 	}
 }
