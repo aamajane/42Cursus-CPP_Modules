@@ -6,11 +6,11 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 19:58:22 by aamajane          #+#    #+#              #
-#    Updated: 2022/11/06 20:02:18 by aamajane         ###   ########.fr        #
+#    Updated: 2022/11/26 16:36:46 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Zombie
+NAME	=	zombie
 
 SRCS	=	main.cpp \
 			Zombie.cpp \
