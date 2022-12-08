@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/08 20:57:25 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/08 21:03:46 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Fixed
 	public:
 		Fixed();
 		Fixed(Fixed const &copy);
-		~Fixed();
 		Fixed &operator=(Fixed const &copy);
+		~Fixed();
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 };
