@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:10:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/26 17:00:26 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/08 20:59:00 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ HumanB::HumanB(std::string name) : name(name), weapon(NULL)
 {
 }
 
-void HumanB::setWeapon(Weapon& weapon)
+void HumanB::setWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;
 }
