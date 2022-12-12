@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/12 20:03:44 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/12 20:57:24 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,98 @@ std::ostream	&operator<<(std::ostream &out, Fixed const &value)
 {
 	out << value.toFloat();
 	return (out);
+}
+
+bool	Fixed::operator>(Fixed const &copy) const
+{
+	return _value > copy.getRawBits();
+}
+
+bool	Fixed::operator<(Fixed const &copy) const
+{
+	return _value < copy.getRawBits();
+}
+
+bool	Fixed::operator>=(Fixed const &copy) const
+{
+	return _value >= copy.getRawBits();
+}
+
+bool	Fixed::operator<=(Fixed const &copy) const
+{
+	return _value <= copy.getRawBits();
+}
+
+bool	Fixed::operator==(Fixed const &copy) const
+{
+	return _value == copy.getRawBits();
+}
+
+bool	Fixed::operator!=(Fixed const &copy) const
+{
+	return _value != copy.getRawBits();
+}
+
+Fixed	Fixed::operator+(Fixed const &copy) const
+{
+	return Fixed(toFloat() + copy.toFloat());
+}
+
+Fixed	Fixed::operator-(Fixed const &copy) const
+{
+	return Fixed(toFloat() - copy.toFloat());
+}
+
+Fixed	Fixed::operator*(Fixed const &copy) const
+{
+	return Fixed(toFloat() * copy.toFloat());
+}
+
+Fixed	Fixed::operator/(Fixed const &copy) const
+{
+	return Fixed(toFloat() / copy.toFloat());
+}
+
+Fixed	&Fixed::operator++()
+{
+	_value++;
+	return *this;
+}
+
+Fixed	Fixed::operator++(int)
+{
+	++_value;
+	return *this;
+}
+
+Fixed	&Fixed::operator--()
+{
+	_value--;
+	return *this;
+}
+
+Fixed	Fixed::operator--(int)
+{
+	--_value;
+	return *this;
+}
+
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
+{
+	return a < b ? a : b;
+}
+
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
+{
+	return a > b ? a : b;
+}
+
+Fixed const	&Fixed::min(Fixed const &a, Fixed const &b)
+{
+	return a < b ? a : b;
+}
+
+Fixed const	&Fixed::max(Fixed const &a, Fixed const &b)
+{
+	return a > b ? a : b;
 }
