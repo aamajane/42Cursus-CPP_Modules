@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:30:09 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/12 21:42:26 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/13 14:51:05 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ Point::~Point()
 
 Point	&Point::operator=(Point const &copy)
 {
-	this->x = copy.x;
-	this->y = copy.y;
+	x = copy.getx();
+	y = copy.gety();
 	return *this;
 }
 
