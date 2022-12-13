@@ -6,12 +6,25 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/12 21:43:05 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/13 17:52:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
+static Fixed const	triangleArea(Point const a, Point const b, Point const c)
+{
+	Fixed const	numTwo(2.0f);
+	Fixed const negative(-1);
+	Fixed const	area = (a.getx() * (b.gety() - c.gety()) + b.getx() * (c.gety() - a.gety()) + c.getx() * (a.gety() - b.gety())) / numTwo;
+	return area > 0 ? area : area * negative;
+}
+
 bool	bsp(Point const a, Point const b, Point const c, Point const point)
 {
+	Fixed const	area = triangleArea(a, b, c);
+	Fixed const	area1 = triangleArea(point, a, b);
+	Fixed const	area2 = triangleArea(point, a, c);
+	Fixed const	area3 = triangleArea(point, b, c);
+	return area == area1 + area2 + area3;
 }
