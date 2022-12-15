@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/13 18:14:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/15 20:01:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Fixed
 		Fixed(float const value);
 		~Fixed();
 
-		Fixed	&operator=(Fixed const &copy);
+		Fixed	&operator=(Fixed const &rhs);
 
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
@@ -37,17 +37,17 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 
-		bool	operator>(Fixed const &copy) const;
-		bool	operator<(Fixed const &copy) const;
-		bool	operator>=(Fixed const &copy) const;
-		bool	operator<=(Fixed const &copy) const;
-		bool	operator==(Fixed const &copy) const;
-		bool	operator!=(Fixed const &copy) const;
+		bool	operator>(Fixed const &rhs) const;
+		bool	operator<(Fixed const &rhs) const;
+		bool	operator>=(Fixed const &rhs) const;
+		bool	operator<=(Fixed const &rhs) const;
+		bool	operator==(Fixed const &rhs) const;
+		bool	operator!=(Fixed const &rhs) const;
 
-		Fixed	operator+(Fixed const &copy) const;
-		Fixed	operator-(Fixed const &copy) const;
-		Fixed	operator*(Fixed const &copy) const;
-		Fixed	operator/(Fixed const &copy) const;
+		Fixed	operator+(Fixed const &rhs) const;
+		Fixed	operator-(Fixed const &rhs) const;
+		Fixed	operator*(Fixed const &rhs) const;
+		Fixed	operator/(Fixed const &rhs) const;
 
 		Fixed	&operator++();
 		Fixed	operator++(int);
