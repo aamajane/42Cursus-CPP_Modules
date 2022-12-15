@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/13 18:11:35 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/15 19:54:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ bool	bsp(Point const a, Point const b, Point const c, Point const point)
 	Fixed const	area1 = triangleArea(point, a, b);
 	Fixed const	area2 = triangleArea(point, a, c);
 	Fixed const	area3 = triangleArea(point, b, c);
+	if (area1 == 0 || area2 == 0 || area3 == 0)
+		return false;
 	return area == area1 + area2 + area3;
 }
