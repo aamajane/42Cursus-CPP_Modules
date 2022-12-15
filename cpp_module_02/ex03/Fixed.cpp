@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/13 18:04:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/15 19:58:36 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ Fixed::~Fixed()
 {
 }
 
-Fixed	&Fixed::operator=(Fixed const &copy)
+Fixed	&Fixed::operator=(Fixed const &rhs)
 {
-	_value = copy.getRawBits();
+	_value = rhs.getRawBits();
 	return *this;
 }
 
@@ -67,54 +67,54 @@ std::ostream	&operator<<(std::ostream &out, Fixed const &value)
 	return out;
 }
 
-bool	Fixed::operator>(Fixed const &copy) const
+bool	Fixed::operator>(Fixed const &rhs) const
 {
-	return _value > copy.getRawBits();
+	return _value > rhs.getRawBits();
 }
 
-bool	Fixed::operator<(Fixed const &copy) const
+bool	Fixed::operator<(Fixed const &rhs) const
 {
-	return _value < copy.getRawBits();
+	return _value < rhs.getRawBits();
 }
 
-bool	Fixed::operator>=(Fixed const &copy) const
+bool	Fixed::operator>=(Fixed const &rhs) const
 {
-	return _value >= copy.getRawBits();
+	return _value >= rhs.getRawBits();
 }
 
-bool	Fixed::operator<=(Fixed const &copy) const
+bool	Fixed::operator<=(Fixed const &rhs) const
 {
-	return _value <= copy.getRawBits();
+	return _value <= rhs.getRawBits();
 }
 
-bool	Fixed::operator==(Fixed const &copy) const
+bool	Fixed::operator==(Fixed const &rhs) const
 {
-	return _value == copy.getRawBits();
+	return _value == rhs.getRawBits();
 }
 
-bool	Fixed::operator!=(Fixed const &copy) const
+bool	Fixed::operator!=(Fixed const &rhs) const
 {
-	return _value != copy.getRawBits();
+	return _value != rhs.getRawBits();
 }
 
-Fixed	Fixed::operator+(Fixed const &copy) const
+Fixed	Fixed::operator+(Fixed const &rhs) const
 {
-	return Fixed(toFloat() + copy.toFloat());
+	return Fixed(toFloat() + rhs.toFloat());
 }
 
-Fixed	Fixed::operator-(Fixed const &copy) const
+Fixed	Fixed::operator-(Fixed const &rhs) const
 {
-	return Fixed(toFloat() - copy.toFloat());
+	return Fixed(toFloat() - rhs.toFloat());
 }
 
-Fixed	Fixed::operator*(Fixed const &copy) const
+Fixed	Fixed::operator*(Fixed const &rhs) const
 {
-	return Fixed(toFloat() * copy.toFloat());
+	return Fixed(toFloat() * rhs.toFloat());
 }
 
-Fixed	Fixed::operator/(Fixed const &copy) const
+Fixed	Fixed::operator/(Fixed const &rhs) const
 {
-	return Fixed(toFloat() / copy.toFloat());
+	return Fixed(toFloat() / rhs.toFloat());
 }
 
 Fixed	&Fixed::operator++()
