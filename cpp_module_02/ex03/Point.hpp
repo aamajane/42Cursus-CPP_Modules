@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:48 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/13 18:07:24 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:50:36 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ class Point
 		Fixed	gety() const;
 };
 
-bool		bsp(Point const a, Point const b, Point const c, Point const point);
+bool	bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
