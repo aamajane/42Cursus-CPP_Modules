@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:06 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/15 20:05:41 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:26:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	main(int ac, char **av)
 			std::cout << "Error: the points must be different" << std::endl;
 			return 0;
 		}
-		std::cout << "A    : " << a.getx() << ", " << a.gety() << std::endl;
-		std::cout << "B    : " << b.getx() << ", " << b.gety() << std::endl;
-		std::cout << "C    : " << c.getx() << ", " << c.gety() << std::endl;
-		std::cout << "Point: " << point.getx() << ", " << point.gety() << std::endl;
+		std::cout << "A    : " << a.getX() << ", " << a.getY() << std::endl;
+		std::cout << "B    : " << b.getX() << ", " << b.getY() << std::endl;
+		std::cout << "C    : " << c.getX() << ", " << c.getY() << std::endl;
+		std::cout << "Point: " << point.getX() << ", " << point.getY() << std::endl;
 		if (bsp(a, b, c, point))
 			std::cout << "Point is inside the triangle" << std::endl;
 		else

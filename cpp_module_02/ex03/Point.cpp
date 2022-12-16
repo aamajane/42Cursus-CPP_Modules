@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:30:09 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/15 19:59:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:26:16 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,22 @@ Point::~Point()
 
 Point	&Point::operator=(Point const &rhs)
 {
-	x = rhs.getx();
-	y = rhs.gety();
+	x = rhs.getX();
+	y = rhs.getY();
 	return *this;
 }
 
-Fixed	Point::getx() const
+Fixed	Point::getX() const
 {
 	return x;
 }
 
-Fixed	Point::gety() const
+Fixed	Point::getY() const
 {
 	return y;
 }
 
 bool	Point::operator==(Point const &rhs) const
 {
-	return x == rhs.getx() && y == rhs.gety();
+	return x == rhs.getX() && y == rhs.getY();
 }

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:48 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/15 19:58:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:25:27 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class Point
 
 		Point	&operator=(Point const &rhs);
 
-		Fixed	getx() const;
-		Fixed	gety() const;
+		Fixed	getX() const;
+		Fixed	getY() const;
 
 		bool	operator==(Point const &rhs) const;
 };

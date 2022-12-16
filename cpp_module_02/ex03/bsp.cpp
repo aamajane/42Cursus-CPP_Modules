@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/15 19:54:33 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:26:02 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static Fixed const	triangleArea(Point const a, Point const b, Point const c)
 {
-	Fixed const	area = (a.getx() * (b.gety() - c.gety()) + b.getx() * (c.gety() - a.gety()) + c.getx() * (a.gety() - b.gety())) / 2;
+	Fixed const	area = (a.getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - a.getY()) + c.getX() * (a.getY() - b.getY())) / 2;
 	return area > 0 ? area : area * -1;
 }
 
