@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:30:09 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/16 15:26:16 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:37:15 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ Point::~Point()
 
 Point	&Point::operator=(Point const &rhs)
 {
-	x = rhs.getX();
-	y = rhs.getY();
+	if (this != &rhs)
+	{
+		x = rhs.getX();
+		y = rhs.getY();
+	}
 	return *this;
 }
 
