@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/16 15:38:02 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 20:50:41 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,6 @@ float	Fixed::toFloat(void) const
 int	Fixed::toInt(void) const
 {
 	return _value >> _fractionalBits;
-}
-
-std::ostream	&operator<<(std::ostream &out, Fixed const &value)
-{
-	out << value.toFloat();
-	return out;
 }
 
 bool	Fixed::operator>(Fixed const &rhs) const
@@ -162,4 +156,10 @@ Fixed const	&Fixed::min(Fixed const &a, Fixed const &b)
 Fixed const	&Fixed::max(Fixed const &a, Fixed const &b)
 {
 	return a > b ? a : b;
+}
+
+std::ostream	&operator<<(std::ostream &out, Fixed const &value)
+{
+	out << value.toFloat();
+	return out;
 }
