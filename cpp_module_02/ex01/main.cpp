@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:06 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/09 15:46:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/16 20:49:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	main(void)
 {
-	Fixed	a;
-	Fixed	const b(10);
-	Fixed	const c(42.42f);
-	Fixed	const d(b);
+	Fixed		a;
+	Fixed const	b(10);
+	Fixed const	c(42.42f);
+	Fixed const	d(b);
 
 	a = Fixed(1234.4321f);
 
