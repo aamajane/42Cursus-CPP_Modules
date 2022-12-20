@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:04 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/16 15:49:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:41:56 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class Fixed
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
-		float	toFloat(void) const;
 		int		toInt(void) const;
+		float	toFloat(void) const;
 
 		bool	operator>(Fixed const &rhs) const;
 		bool	operator<(Fixed const &rhs) const;
