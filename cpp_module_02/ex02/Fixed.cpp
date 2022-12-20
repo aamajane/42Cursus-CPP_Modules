@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/20 15:38:33 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:41:22 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,14 @@ void	Fixed::setRawBits(int const raw)
 	_value = raw;
 }
 
-float	Fixed::toFloat(void) const
-{
-	return (float)_value / (1 << _fractionalBits);
-}
-
 int	Fixed::toInt(void) const
 {
 	return _value >> _fractionalBits;
+}
+
+float	Fixed::toFloat(void) const
+{
+	return (float)_value / (1 << _fractionalBits);
 }
 
 bool	Fixed::operator>(Fixed const &rhs) const
