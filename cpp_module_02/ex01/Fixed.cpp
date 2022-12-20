@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/20 16:11:01 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:27:49 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Fixed::Fixed(int const value)
 Fixed::Fixed(float const value)
 {
 	std::cout << "Float constructor called" << std::endl;
-	_value = roundf(value * (1 << _fractionalBits));
+	_value = (int)roundf(value * (1 << _fractionalBits));
 }
 
 Fixed::~Fixed()
