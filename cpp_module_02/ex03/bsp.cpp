@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/21 18:19:58 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/21 18:23:52 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ bool	bsp(Point const a, Point const b, Point const c, Point const point)
 	Fixed const	area3 = triangleArea(point, b, c);
 	if (area == 0)
 	{
-		std::cout << "The points are collinear" << std::endl;
+		std::cout << "The points (A, B, C) are collinear" << std::endl;
 		exit(0);
 	}
 	if (area1 == 0 || area2 == 0 || area3 == 0)
