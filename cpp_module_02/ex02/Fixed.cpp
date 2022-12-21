@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/21 20:37:53 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/21 20:45:30 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ Fixed	&Fixed::operator++()
 Fixed	Fixed::operator++(int)
 {
 	Fixed	tmp(*this);
-	++(*this);
+	_value++;
 	return tmp;
 }
 
@@ -134,7 +134,7 @@ Fixed	&Fixed::operator--()
 Fixed	Fixed::operator--(int)
 {
 	Fixed	tmp(*this);
-	--(*this);
+	_value--;
 	return tmp;
 }
 
