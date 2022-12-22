@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:30:09 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/22 16:59:40 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/22 17:01:44 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ Point	&Point::operator=(Point const &rhs)
 {
 	if (this != &rhs)
 	{
-		x = rhs.getX();
-		y = rhs.getY();
+		this->x = rhs.x;
+		this->y = rhs.y;
 	}
 	return *this;
 }
 
 Fixed	Point::getX() const
 {
-	return x;
+	return this->x;
 }
 
 Fixed	Point::getY() const
 {
-	return y;
+	return this->y;
 }
