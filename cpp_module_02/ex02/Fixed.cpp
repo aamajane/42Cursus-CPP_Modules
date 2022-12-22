@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:01 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/22 16:22:24 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/22 16:32:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Fixed::~Fixed()
 Fixed	&Fixed::operator=(Fixed const &rhs)
 {
 	if (this != &rhs)
-		this->_value = rhs.getRawBits();
+		this->_value = rhs._value;
 	return *this;
 }
 
@@ -62,32 +62,32 @@ float	Fixed::toFloat(void) const
 
 bool	Fixed::operator>(Fixed const &rhs) const
 {
-	return this->getRawBits() > rhs.getRawBits();
+	return this->_value > rhs._value;
 }
 
 bool	Fixed::operator<(Fixed const &rhs) const
 {
-	return this->getRawBits() < rhs.getRawBits();
+	return this->_value < rhs._value;
 }
 
 bool	Fixed::operator>=(Fixed const &rhs) const
 {
-	return this->getRawBits() >= rhs.getRawBits();
+	return this->_value >= rhs._value;
 }
 
 bool	Fixed::operator<=(Fixed const &rhs) const
 {
-	return this->getRawBits() <= rhs.getRawBits();
+	return this->_value <= rhs._value;
 }
 
 bool	Fixed::operator==(Fixed const &rhs) const
 {
-	return this->getRawBits() == rhs.getRawBits();
+	return this->_value == rhs._value;
 }
 
 bool	Fixed::operator!=(Fixed const &rhs) const
 {
-	return this->_value != rhs.getRawBits();
+	return this->_value != rhs._value;
 }
 
 Fixed	Fixed::operator+(Fixed const &rhs) const
