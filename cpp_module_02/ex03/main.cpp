@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 14:33:06 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/22 16:46:04 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/22 16:54:43 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int	main(int ac, char **av)
 {
 	if (ac == 9)
 	{
-		Point a(atof(av[1]), atof(av[2]));
-		Point b(atof(av[3]), atof(av[4]));
-		Point c(atof(av[5]), atof(av[6]));
-		Point point(atof(av[7]), atof(av[8]));
+		Point	a(atof(av[1]), atof(av[2]));
+		Point	b(atof(av[3]), atof(av[4]));
+		Point	c(atof(av[5]), atof(av[6]));
+		Point	point(atof(av[7]), atof(av[8]));
 		std::cout << "A    : " << a.getX() << ", " << a.getY() << std::endl;
 		std::cout << "B    : " << b.getX() << ", " << b.getY() << std::endl;
 		std::cout << "C    : " << c.getX() << ", " << c.getY() << std::endl;
