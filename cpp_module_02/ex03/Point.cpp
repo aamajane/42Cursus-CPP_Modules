@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:30:09 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/16 15:37:15 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/22 16:59:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,4 @@ Fixed	Point::getX() const
 Fixed	Point::getY() const
 {
 	return y;
-}
-
-bool	Point::operator==(Point const &rhs) const
-{
-	return x == rhs.getX() && y == rhs.getY();
 }

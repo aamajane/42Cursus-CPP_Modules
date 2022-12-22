@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:48 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/16 15:25:27 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/22 16:59:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ class Point
 
 		Fixed	getX() const;
 		Fixed	getY() const;
-
-		bool	operator==(Point const &rhs) const;
 };
 
 bool	bsp(Point const a, Point const b, Point const c, Point const point);
