@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:24 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/24 20:39:03 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/24 21:06:09 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,19 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &rhs)
 		this->_attackDamage = rhs._attackDamage;
 	}
 	return *this;
+}
+
+void	ClapTrap::attack(std::string const &target)
+{
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	std::cout << "ClapTrap " << this->_name << " takes " << amount << " points of damage!" << std::endl;
+}
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	std::cout << "ClapTrap " << this->_name << " is repaired by " << amount << " points!" << std::endl;
 }
