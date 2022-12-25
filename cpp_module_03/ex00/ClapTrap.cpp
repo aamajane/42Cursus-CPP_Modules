@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:24 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 15:02:36 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/25 15:05:38 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ClapTrap::attack(std::string const &target)
 		<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is out of energy!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't attack!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -68,7 +68,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		<< " points of damage!" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is out of energy!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't take damage!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -81,5 +81,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		<< amount << " points!" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is out of energy!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't be repaired!" << std::endl;
 }
