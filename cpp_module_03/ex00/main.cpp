@@ -6,13 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 15:21:40 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/25 18:14:25 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int	main(void)
+int	main()
 {
 	ClapTrap	one("One");
 	one.attack("Enemy");
