@@ -6,11 +6,11 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 19:58:22 by aamajane          #+#    #+#              #
-#    Updated: 2022/12/24 17:35:52 by aamajane         ###   ########.fr        #
+#    Updated: 2022/12/25 15:26:20 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	clapTrap
+NAME	=	program
 
 SRCS	=	main.cpp \
 			ClapTrap.cpp
