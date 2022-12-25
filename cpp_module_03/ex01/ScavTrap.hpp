@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 15:27:45 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 16:41:59 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/25 20:13:08 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ScavTrap : public ClapTrap
 
 		ScavTrap	&operator=(ScavTrap const &rhs);
 
+		void	attack(std::string const &target);
 		void	guardGate();
 };
 

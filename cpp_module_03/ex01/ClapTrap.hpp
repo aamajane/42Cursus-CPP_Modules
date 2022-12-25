@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:28 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 16:41:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/25 20:33:25 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	_name;
 		int			_healthPoints;
 		int			_energyPoints;
