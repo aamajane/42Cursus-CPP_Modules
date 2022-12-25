@@ -6,21 +6,21 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 22:32:46 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/26 00:14:31 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main()
 {
-	ScavTrap	one("One");
-	one.guardGate();
+	FragTrap	one("One");
+	one.highFivesGuys();
 	one.attack("Enemy");
 	one.takeDamage(50);
 	one.beRepaired(30);
 	one.takeDamage(100);
-	one.guardGate();
+	one.highFivesGuys();
 	one.attack("Enemy");
 	one.beRepaired(100);
 	one.takeDamage(55);
