@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 22:32:46 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/26 18:49:42 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	main()
 	one.guardGate();
 	one.attack("Enemy");
 	one.beRepaired(100);
-	one.takeDamage(55);
+	one.takeDamage(50);
 	return 0;
 }
