@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 00:01:46 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/26 22:04:10 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/26 23:18:02 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class FragTrap : virtual public ClapTrap
 
 		FragTrap	&operator=(FragTrap const &rhs);
 
-		void	attack(std::string const &target);
-		void	highFivesGuys();
+		virtual void	attack(std::string const &target);
+		void			highFivesGuys();
 };
 
 #endif
