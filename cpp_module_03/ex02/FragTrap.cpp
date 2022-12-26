@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 00:01:44 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/26 18:49:15 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/26 20:18:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
-	std::cout << "FragTrap default constructor called." << std::endl;
+	std::cout << "FragTrap default constructor called" << std::endl;
 	this->_healthPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
@@ -22,7 +22,7 @@ FragTrap::FragTrap() : ClapTrap()
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "FragTrap string constructor called." << std::endl;
+	std::cout << "FragTrap string constructor called" << std::endl;
 	this->_healthPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
@@ -30,7 +30,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 
 FragTrap::FragTrap(FragTrap const &copy) : ClapTrap(copy)
 {
-	std::cout << "FragTrap copy constructor called." << std::endl;
+	std::cout << "FragTrap copy constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap()
