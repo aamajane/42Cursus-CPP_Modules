@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:24 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/25 19:59:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/26 22:09:04 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ void	ClapTrap::attack(std::string const &target)
 	{
 		this->_energyPoints--;
 		std::cout << "ClapTrap " << this->_name << " attacks " << target 
-		<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+		<< ", causing " << this->_attackDamage << " points of damage" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " can't attack!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't attack" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -67,10 +67,10 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		if (this->_healthPoints < 0)
 			this->_healthPoints = 0;
 		std::cout << "ClapTrap " << this->_name << " takes " << amount 
-		<< " points of damage!" << std::endl;
+		<< " points of damage" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " can't take damage!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't take damage" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -80,8 +80,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		this->_healthPoints += amount;
 		this->_energyPoints--;
 		std::cout << "ClapTrap " << this->_name << " is repaired by " 
-		<< amount << " points!" << std::endl;
+		<< amount << " points" << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " can't be repaired!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " can't be repaired" << std::endl;
 }
