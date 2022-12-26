@@ -6,7 +6,61 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 19:32:29 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/26 19:32:55 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/26 20:15:52 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap() 
+	: ClapTrap(), ScavTrap(), FragTrap()
+{
+	std::cout << "DiamondTrap default constructor called" << std::endl;
+	this->_healthPoints = FragTrap::_healthPoints;
+	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_attackDamage = FragTrap::_attackDamage;
+}
+
+DiamondTrap::DiamondTrap(std::string name) 
+	: ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
+{
+	std::cout << "DiamondTrap string constructor called" << std::endl;
+	this->_name = name;
+	this->_healthPoints = FragTrap::_healthPoints;
+	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_attackDamage = FragTrap::_attackDamage;
+}
+
+DiamondTrap::DiamondTrap(DiamondTrap const &copy) 
+	: ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
+{
+	std::cout << "DiamondTrap copy constructor called" << std::endl;
+}
+
+DiamondTrap::~DiamondTrap()
+{
+	std::cout << "DiamondTrap destructor called" << std::endl;
+}
+
+DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &rhs)
+{
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_healthPoints = rhs._healthPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
+	return *this;
+}
+
+void	DiamondTrap::attack(std::string const &target)
+{
+	ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI()
+{
+	std::cout << "DiamondTrap name: " << this->_name << std::endl;
+	std::cout << "ClapTrap name: " << ClapTrap::_name << std::endl;
+}
