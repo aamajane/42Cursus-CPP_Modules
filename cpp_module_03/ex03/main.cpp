@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/26 22:03:57 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:26:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	main()
 {
-	DiamondTrap	one("One");
+	DiamondTrap	one("one");
 	one.whoAmI();
 	one.guardGate();
 	one.highFivesGuys();
-	one.attack("Enemy");
-	one.takeDamage(50);
+	one.attack("enemy");
 	one.beRepaired(50);
+	one.takeDamage(150);
 	return 0;
 }
