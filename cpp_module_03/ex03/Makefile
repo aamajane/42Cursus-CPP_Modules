@@ -6,7 +6,7 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 19:58:22 by aamajane          #+#    #+#              #
-#    Updated: 2022/12/27 17:49:26 by aamajane         ###   ########.fr        #
+#    Updated: 2022/12/27 20:42:18 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 
 CC		=	c++
 
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -Wshadow -std=c++98
 
 RM		=	rm -rf
 
