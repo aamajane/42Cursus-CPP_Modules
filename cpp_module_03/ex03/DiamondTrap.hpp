@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 19:31:40 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/26 20:06:27 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 17:17:37 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		~DiamondTrap();
 
 		DiamondTrap	&operator=(DiamondTrap const &rhs);
+
+		std::string	getName() const;
 
 		void	attack(std::string const &target);
 		void	whoAmI();

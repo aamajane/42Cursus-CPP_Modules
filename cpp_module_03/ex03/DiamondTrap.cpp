@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 19:32:29 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/26 22:37:55 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 17:14:24 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &rhs)
 		this->_attackDamage = rhs._attackDamage;
 	}
 	return *this;
+}
+
+std::string	DiamondTrap::getName() const
+{
+	return this->_name;
 }
 
 void	DiamondTrap::attack(std::string const &target)
