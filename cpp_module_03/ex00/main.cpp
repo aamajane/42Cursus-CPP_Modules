@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/27 16:47:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 22:41:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main()
 	one.attack("enemy");
 	one.beRepaired(10);
 	one.takeDamage(5);
+	std::cout << std::endl;
 
 	return 0;
 }
