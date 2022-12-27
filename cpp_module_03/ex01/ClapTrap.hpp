@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:28 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/27 17:05:52 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 19:53:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ class ClapTrap
 		unsigned int	getEnergyPoints() const;
 		unsigned int	getAttackDamage() const;
 
-		void	attack(std::string const &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		virtual void	attack(std::string const &target);
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
 };
 
 std::ostream	&operator<<(std::ostream &out, ClapTrap const &rhs);
