@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 19:32:29 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/27 17:52:59 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 18:03:12 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const &copy)
 	: ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
 {
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
+	*this = copy;
 }
 
 DiamondTrap::~DiamondTrap()
