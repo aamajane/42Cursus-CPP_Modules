@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/27 17:05:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 18:12:27 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	main()
 
 	// ScavTrap	scav("one");
 	// ClapTrap	*clap = &scav;
-	// scav.attack("Enemy");
-	// clap->attack("Enemy");
+	// scav.attack("enemy");
+	// clap->attack("enemy");
 
 	return 0;
 }
