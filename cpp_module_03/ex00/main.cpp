@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/27 15:03:30 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:20:35 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	main()
 {
-	ClapTrap	one("One");
-	one.attack("Enemy");
+	ClapTrap	one("one");
+	one.attack("enemy");
 	one.beRepaired(5);
 	one.takeDamage(15);
-	one.attack("Enemy");
+	one.attack("enemy");
 	one.beRepaired(10);
 	one.takeDamage(5);
 	return 0;
