@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:36:28 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/27 15:19:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/27 17:05:52 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 class ClapTrap
 {
 	protected:
-		std::string	_name;
-		int			_healthPoints;
-		int			_energyPoints;
-		int			_attackDamage;
+		std::string		_name;
+		unsigned int	_healthPoints;
+		unsigned int	_energyPoints;
+		unsigned int	_attackDamage;
 
 	public:
 		ClapTrap();
@@ -31,9 +31,16 @@ class ClapTrap
 
 		ClapTrap	&operator=(ClapTrap const &rhs);
 
-		virtual void	attack(std::string const &target);
-		void			takeDamage(unsigned int amount);
-		void			beRepaired(unsigned int amount);
+		std::string		getName() const;
+		unsigned int	getHealthPoints() const;
+		unsigned int	getEnergyPoints() const;
+		unsigned int	getAttackDamage() const;
+
+		void	attack(std::string const &target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
+
+std::ostream	&operator<<(std::ostream &out, ClapTrap const &rhs);
 
 #endif
