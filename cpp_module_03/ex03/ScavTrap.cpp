@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 15:27:40 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/28 15:04:41 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/28 23:27:44 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	this->_healthPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
+	this->_scavEnergyPoints = this->_energyPoints;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -26,6 +27,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->_healthPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
+	this->_scavEnergyPoints = this->_energyPoints;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &copy) : ClapTrap(copy)
