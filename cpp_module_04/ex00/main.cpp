@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:02:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 23:11:41 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/30 23:13:13 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 int	main()
 {
-	const Animal*	animal = new Animal();
-	const Animal*	dog = new Dog();
-	const Animal*	cat = new Cat();
+	Animal const	*animal = new Animal();
+	Animal const	*dog = new Dog();
+	Animal const	*cat = new Cat();
 
 	std::cout << animal->getType() << std::endl;
 	std::cout << dog->getType() << std::endl;
