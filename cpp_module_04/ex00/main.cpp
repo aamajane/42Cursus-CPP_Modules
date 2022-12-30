@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:02:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 23:06:03 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/30 23:11:41 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	main()
 	const Animal*	dog = new Dog();
 	const Animal*	cat = new Cat();
 
-	std::cout << animal->getType() << " " << std::endl;
-	std::cout << dog->getType() << " " << std::endl;
-	std::cout << cat->getType() << " " << std::endl;
+	std::cout << animal->getType() << std::endl;
+	std::cout << dog->getType() << std::endl;
+	std::cout << cat->getType() << std::endl;
 
 	animal->makeSound();
 	cat->makeSound();
