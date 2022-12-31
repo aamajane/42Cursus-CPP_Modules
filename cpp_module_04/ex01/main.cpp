@@ -6,49 +6,24 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:02:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 15:50:20 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:15:39 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int	main()
 {
-	std::cout << std::endl << "============ TEST1 ============" << std::endl;
+	Animal	*animals[2];
 
-	Animal const	*animal = new Animal();
-	Animal const	*dog = new Dog();
-	Animal const	*cat = new Cat();
+	animals[0] = new Dog();
+	animals[1] = new Cat();
 
-	std::cout << animal->getType() << std::endl;
-	std::cout << dog->getType() << std::endl;
-	std::cout << cat->getType() << std::endl;
-
-	animal->makeSound();
-	cat->makeSound();
-	dog->makeSound();
-
-	delete animal;
-	delete dog;
-	delete cat;
-
-	std::cout << std::endl << "============ TEST2 ============" << std::endl;
-
-	WrongAnimal const	*wrongAnimal = new WrongAnimal();
-	WrongAnimal const	*wrongCat = new WrongCat();
-
-	std::cout << wrongAnimal->getType() << std::endl;
-	std::cout << wrongCat->getType() << std::endl;
-
-	wrongAnimal->makeSound();
-	wrongCat->makeSound();
-
-	delete wrongAnimal;
-	delete wrongCat;
+	delete animals[0];
+	delete animals[1];
 
 	return 0;
 }
