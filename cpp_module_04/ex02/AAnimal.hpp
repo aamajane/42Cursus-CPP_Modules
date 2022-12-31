@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:05:44 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 21:01:02 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 21:03:53 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AAnimal
 		AAnimal	&operator=(AAnimal const &copy);
 
 		std::string		getType() const;
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 };
 
 #endif

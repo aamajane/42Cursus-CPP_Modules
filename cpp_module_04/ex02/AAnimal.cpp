@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:05:47 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 21:01:21 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 21:03:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,4 @@ AAnimal	&AAnimal::operator=(AAnimal const &copy)
 std::string	AAnimal::getType() const
 {
 	return this->type;
-}
-
-void	AAnimal::makeSound() const
-{
-	std::cout << "AAnimal sound" << std::endl;
 }
