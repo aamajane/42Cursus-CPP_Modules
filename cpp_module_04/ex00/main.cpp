@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:02:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 23:44:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 15:50:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 int	main()
 {
+	std::cout << std::endl << "============ TEST1 ============" << std::endl;
+
 	Animal const	*animal = new Animal();
 	Animal const	*dog = new Dog();
 	Animal const	*cat = new Cat();
@@ -34,17 +36,19 @@ int	main()
 	delete dog;
 	delete cat;
 
-	// WrongAnimal const	*wrongAnimal = new WrongAnimal();
-	// WrongAnimal const	*wrongCat = new WrongCat();
+	std::cout << std::endl << "============ TEST2 ============" << std::endl;
 
-	// std::cout << wrongAnimal->getType() << std::endl;
-	// std::cout << wrongCat->getType() << std::endl;
+	WrongAnimal const	*wrongAnimal = new WrongAnimal();
+	WrongAnimal const	*wrongCat = new WrongCat();
 
-	// wrongAnimal->makeSound();
-	// wrongCat->makeSound();
+	std::cout << wrongAnimal->getType() << std::endl;
+	std::cout << wrongCat->getType() << std::endl;
 
-	// delete wrongAnimal;
-	// delete wrongCat;
+	wrongAnimal->makeSound();
+	wrongCat->makeSound();
+
+	delete wrongAnimal;
+	delete wrongCat;
 
 	return 0;
 }

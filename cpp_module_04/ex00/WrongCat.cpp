@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:28:16 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 23:29:01 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 15:42:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 WrongCat::WrongCat() : WrongAnimal()
 {
-	this->type = "WrongCat";
 	std::cout << "WrongCat constructor called" << std::endl;
+	this->type = "WrongCat";
 }
 
 WrongCat::WrongCat(WrongCat const &copy) : WrongAnimal(copy)

@@ -6,15 +6,14 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:26:48 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 23:27:46 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 15:42:07 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
-	this->type = "WrongAnimal";
 	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
