@@ -6,7 +6,7 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 19:58:22 by aamajane          #+#    #+#              #
-#    Updated: 2022/12/31 16:13:56 by aamajane         ###   ########.fr        #
+#    Updated: 2022/12/31 16:18:35 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME	=	program
 SRCS	=	main.cpp \
 			Animal.cpp \
 			Dog.cpp \
-			Cat.cpp
+			Cat.cpp \
+			Brain.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
