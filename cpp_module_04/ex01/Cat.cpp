@@ -6,22 +6,23 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:58:59 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 18:10:12 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 20:58:52 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat()
 {
 	std::cout << "Cat constructor called" << std::endl;
 	this->type = "Cat";
 	this->brain = new Brain();
 }
 
-Cat::Cat(Cat const &copy) : Animal(copy)
+Cat::Cat(Cat const &copy)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
+	*this = copy;
 }
 
 Cat::~Cat()
@@ -33,7 +34,10 @@ Cat::~Cat()
 Cat	&Cat::operator=(Cat const &copy)
 {
 	if (this != &copy)
+	{
 		this->type = copy.type;
+		this->brain = new Brain(*copy.brain);
+	}
 	return *this;
 }
 
