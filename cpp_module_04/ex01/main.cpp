@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:02:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 18:15:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:55:46 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,21 @@
 
 int	main()
 {
-	Animal	*animals[2];
+	Animal	*animals[4];
 
-	animals[0] = new Dog();
-	animals[1] = new Cat();
+	for(int i = 0; i < 4; i++)
+	{
+		if (i % 2)
+			animals[i] = new Dog(), std::cout << std::endl;
+		else
+			animals[i] = new Cat(), std::cout << std::endl;
+	}
 
-	delete animals[0];
-	delete animals[1];
+	for(int i = 0; i < 4; i++)
+		animals[i]->makeSound(), std::cout << std::endl;
+
+	for(int i = 0; i < 4; i++)
+		delete animals[i], std::cout << std::endl;
 
 	return 0;
 }
