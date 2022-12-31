@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:02:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 18:55:46 by aamajane         ###   ########.fr       */
+/*   Updated: 2022/12/31 19:47:08 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main()
 
 	for(int i = 0; i < 4; i++)
 	{
-		if (i % 2)
+		if (i % 2 == 0)
 			animals[i] = new Dog(), std::cout << std::endl;
 		else
 			animals[i] = new Cat(), std::cout << std::endl;
