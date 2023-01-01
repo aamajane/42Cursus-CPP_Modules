@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 23:02:44 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:24:52 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:42:08 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 class AMateria
 {
 	protected:
-		std::string		type;
-		unsigned int	xp;
+		std::string	type;
 
 	public:
 		AMateria();
@@ -30,7 +29,6 @@ class AMateria
 		virtual ~AMateria();
 
 		std::string const	&getType() const;
-		unsigned int		getXP() const;
 
 		virtual AMateria	*clone() const = 0;
 		virtual void		use(ICharacter &target);
