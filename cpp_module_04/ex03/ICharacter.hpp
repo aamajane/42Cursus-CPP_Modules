@@ -6,14 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 16:23:49 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:26:50 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:52:19 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 #define ICHARACTER_HPP
 
-#include <iostream>
 #include "AMateria.hpp"
 
 class ICharacter
