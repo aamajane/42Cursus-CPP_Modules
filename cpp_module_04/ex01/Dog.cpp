@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:01:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:31:40 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:27:04 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Dog::Dog(Dog const &copy)
 	*this = copy;
 }
 
-Dog	&Dog::operator=(Dog const &rhs)
+Dog &Dog::operator=(Dog const &rhs)
 {
 	if (this != &rhs)
 	{

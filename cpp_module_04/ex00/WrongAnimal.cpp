@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:26:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:29:51 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:26:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ WrongAnimal::WrongAnimal(WrongAnimal const &copy)
 	*this = copy;
 }
 
-WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs)
+WrongAnimal &WrongAnimal::operator=(WrongAnimal const &rhs)
 {
 	if (this != &rhs)
 		this->type = rhs.type;

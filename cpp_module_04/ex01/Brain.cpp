@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 16:18:49 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:31:03 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:26:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Brain::Brain(Brain const &copy)
 		this->ideas[i] = copy.getIdea(i);
 }
 
-Brain	&Brain::operator=(Brain const &rhs)
+Brain &Brain::operator=(Brain const &rhs)
 {
 	if (this != &rhs)
 		for (int i = 0; i < 100; i++)
