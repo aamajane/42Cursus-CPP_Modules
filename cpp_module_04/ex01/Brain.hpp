@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 16:18:47 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 16:19:54 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:12:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Brain
 		Brain(Brain const &copy);
 		~Brain();
 
-		Brain	&operator=(Brain const &copy);
+		Brain	&operator=(Brain const &rhs);
 
 		std::string	getIdea(int i) const;
 		void		setIdea(int i, std::string idea);

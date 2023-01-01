@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:05:47 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 21:03:57 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:13:10 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ AAnimal::~AAnimal()
 	std::cout << "AAnimal destructor called" << std::endl;
 }
 
-AAnimal	&AAnimal::operator=(AAnimal const &copy)
+AAnimal	&AAnimal::operator=(AAnimal const &rhs)
 {
-	if (this != &copy)
-		this->type = copy.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return *this;
 }
 

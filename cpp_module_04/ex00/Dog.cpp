@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:01:45 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 20:54:35 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:11:21 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ Dog::~Dog()
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-Dog	&Dog::operator=(Dog const &copy)
+Dog	&Dog::operator=(Dog const &rhs)
 {
-	if (this != &copy)
-		this->type = copy.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:58:57 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 22:59:35 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:11:00 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
 		Cat(Cat const &copy);
 		~Cat();
 
-		Cat	&operator=(Cat const &copy);
+		Cat	&operator=(Cat const &rhs);
 
 		void	makeSound() const;
 };

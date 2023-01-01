@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:28:14 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/30 23:30:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:11:41 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class WrongCat : public WrongAnimal
 		WrongCat(WrongCat const &copy);
 		~WrongCat();
 
-		WrongCat	&operator=(WrongCat const &copy);
+		WrongCat	&operator=(WrongCat const &rhs);
 
 		void	makeSound() const;
 };

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:58:59 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 15:54:09 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:13:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ Cat::~Cat()
 	std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat	&Cat::operator=(Cat const &copy)
+Cat	&Cat::operator=(Cat const &rhs)
 {
-	if (this != &copy)
+	if (this != &rhs)
 	{
-		this->type = copy.type;
+		this->type = rhs.type;
 		delete this->brain;
-		this->brain = new Brain(*copy.brain);
+		this->brain = new Brain(*rhs.brain);
 	}
 	return *this;
 }

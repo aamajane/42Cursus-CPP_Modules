@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:01:43 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 16:53:59 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:12:48 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Dog : public Animal
 		Dog(Dog const &copy);
 		~Dog();
 
-		Dog	&operator=(Dog const &copy);
+		Dog	&operator=(Dog const &rhs);
 
 		void	makeSound() const;
 };

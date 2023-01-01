@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 16:18:49 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 16:29:40 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:13:19 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ Brain::~Brain()
 	std::cout << "Brain destructor called" << std::endl;
 }
 
-Brain	&Brain::operator=(Brain const &copy)
+Brain	&Brain::operator=(Brain const &rhs)
 {
-	if (this != &copy)
+	if (this != &rhs)
 		for (int i = 0; i < 100; i++)
-			this->ideas[i] = copy.ideas[i];
+			this->ideas[i] = rhs.ideas[i];
 	return (*this);
 }
 

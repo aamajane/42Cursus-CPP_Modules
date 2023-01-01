@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:26:48 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/31 15:42:07 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:11:35 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &copy)
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs)
 {
-	if (this != &copy)
-		this->type = copy.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return *this;
 }
 
