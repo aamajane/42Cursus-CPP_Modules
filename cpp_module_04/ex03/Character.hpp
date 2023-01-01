@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:47:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 17:52:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 18:08:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Character : public ICharacter
 		Character(std::string const &name);
 		Character(Character const &copy);
 		Character &operator=(Character const &rhs);
-		virtual ~Character();
+		~Character();
 
 		std::string const	&getName() const;
 
