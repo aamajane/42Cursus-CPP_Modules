@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:26:46 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:11:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:29:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ class WrongAnimal
 	public:
 		WrongAnimal();
 		WrongAnimal(WrongAnimal const &copy);
+		WrongAnimal &operator=(WrongAnimal const &rhs);
 		~WrongAnimal();
-
-		WrongAnimal	&operator=(WrongAnimal const &rhs);
 
 		std::string		getType() const;
 		void			makeSound() const;

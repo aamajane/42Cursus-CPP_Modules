@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:26:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:11:35 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:29:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ WrongAnimal::WrongAnimal(WrongAnimal const &copy)
 	*this = copy;
 }
 
-WrongAnimal::~WrongAnimal()
-{
-	std::cout << "WrongAnimal destructor called" << std::endl;
-}
-
 WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &rhs)
 {
 	if (this != &rhs)
 		this->type = rhs.type;
 	return *this;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
 std::string	WrongAnimal::getType() const

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:05:47 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 16:12:15 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:30:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ Animal::Animal(Animal const &copy)
 	*this = copy;
 }
 
-Animal::~Animal()
-{
-	std::cout << "Animal destructor called" << std::endl;
-}
-
 Animal	&Animal::operator=(Animal const &rhs)
 {
 	if (this != &rhs)
 		this->type = rhs.type;
 	return *this;
+}
+
+Animal::~Animal()
+{
+	std::cout << "Animal destructor called" << std::endl;
 }
 
 std::string	Animal::getType() const
