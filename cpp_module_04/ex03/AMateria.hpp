@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 23:02:44 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 18:19:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/02 15:32:30 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class AMateria
 		std::string const	&getType() const;
 
 		virtual AMateria	*clone() const = 0;
-		virtual void		use(ICharacter &target);
+		virtual void		use(ICharacter &target) = 0;
 };
 
 #endif
