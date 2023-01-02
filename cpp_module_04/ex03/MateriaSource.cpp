@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:45:16 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 18:03:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/02 15:51:43 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ MateriaSource::MateriaSource(MateriaSource const &copy)
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &rhs)
 {
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4 && this->slot[i]; i++)
 		delete this->slot[i];
 	for (int i = 0; i < 4; i++)
 		this->slot[i] = rhs.slot[i]->clone();
