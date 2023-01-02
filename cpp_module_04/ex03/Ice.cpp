@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:43:09 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 17:43:54 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/02 15:35:18 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Ice::~Ice() {}
 
 AMateria	*Ice::clone() const
 {
-	return new Ice(*this);
+	return new Ice();
 }
 
 void	Ice::use(ICharacter &target)
