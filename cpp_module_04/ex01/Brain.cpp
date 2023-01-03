@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 16:18:49 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/01 17:26:51 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/03 20:08:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ Brain::Brain()
 Brain::Brain(Brain const &copy)
 {
 	std::cout << "Brain copy constructor called" << std::endl;
-	for (int i = 0; i < 100; i++)
-		this->ideas[i] = copy.getIdea(i);
+	*this = copy;
 }
 
 Brain &Brain::operator=(Brain const &rhs)
