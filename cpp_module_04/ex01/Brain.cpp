@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 16:18:49 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/03 20:08:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:47:00 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ std::string	Brain::getIdea(int i) const
 
 void	Brain::setIdea(int i, std::string idea)
 {
-	this->ideas[i] = idea;
+	if (i >= 0 && i < 100)
+		this->ideas[i] = idea;
 }
