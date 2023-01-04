@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:45:16 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/04 19:44:20 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:24:19 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ MateriaSource::MateriaSource()
 
 MateriaSource::MateriaSource(MateriaSource const &copy)
 {
+	for (int i = 0; i < 4; i++)
+		slot[i] = NULL;
 	*this = copy;
 }
 

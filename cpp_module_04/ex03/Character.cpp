@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:47:59 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/04 20:01:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:33:46 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Character::Character(std::string const &name) : name(name)
 
 Character::Character(Character const &copy)
 {
+	for (int i = 0; i < 4; i++)
+		this->slot[i] = NULL;
 	*this = copy;
 }
 
