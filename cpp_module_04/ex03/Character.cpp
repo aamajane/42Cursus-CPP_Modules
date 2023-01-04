@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:47:59 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/04 19:34:34 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:37:58 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	Character::equip(AMateria *m)
 			return ;
 		}
 	}
+	std::cout << "Inventory is full" << std::endl;
 }
 
 void	Character::unequip(int idx)

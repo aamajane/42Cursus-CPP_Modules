@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:45:16 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/04 19:34:38 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:38:00 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	MateriaSource::learnMateria(AMateria *m)
 			return ;
 		}
 	}
+	std::cout << "Inventory is full" << std::endl;
 }
 
 AMateria	*MateriaSource::createMateria(std::string const &type)
