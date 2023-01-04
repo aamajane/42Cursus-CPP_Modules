@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:45:16 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/02 15:51:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:55:42 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ void	MateriaSource::learnMateria(AMateria *m)
 
 AMateria	*MateriaSource::createMateria(std::string const &type)
 {
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4 && this->slot[i]; i++)
 	{
-		if (this->slot[i] && this->slot[i]->getType() == type)
+		if (this->slot[i]->getType() == type)
 			return this->slot[i]->clone();
 	}
 	return NULL;
