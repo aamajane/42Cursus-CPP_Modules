@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 23:01:51 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/04 19:37:10 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:46:49 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ int main()
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+
+	me->unequip(0);
+	me->unequip(1);
 
 	delete bob;
 	delete me;
