@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 23:02:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/02 15:32:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:11:35 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ AMateria::~AMateria() {}
 std::string const	&AMateria::getType() const
 {
 	return this->type;
+}
+
+void	AMateria::use(ICharacter &target)
+{
+	(void)target;
 }

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 17:47:59 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/04 19:44:07 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/04 20:01:45 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ void	Character::use(int idx, ICharacter &target)
 {
 	if (idx < 0 || idx > 3)
 		std::cout << "Invalid index" << std::endl;
-	else
+	else if (this->slot[idx])
 		this->slot[idx]->use(target);
 }
