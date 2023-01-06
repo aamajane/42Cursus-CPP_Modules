@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 20:59:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:52:24 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,52 +15,19 @@
 
 int	main()
 {
-	std::cout << "=============== TEST1 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("One", 2);
+		Bureaucrat	bureaucrat("OMAR", 2);
+		Form		form("Birth Certificate", 1, 1);
+	
 		std::cout << bureaucrat;
+		std::cout << form;
+		bureaucrat.signForm(form);
 		bureaucrat.incrementGrade();
 		std::cout << bureaucrat;
-		bureaucrat.incrementGrade();
-		std::cout << bureaucrat;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "=============== TEST2 ===============" << std::endl;
-	try
-	{
-		Bureaucrat	bureaucrat("Tow", 149);
-		std::cout << bureaucrat;
-		bureaucrat.decrementGrade();
-		std::cout << bureaucrat;
-		bureaucrat.decrementGrade();
-		std::cout << bureaucrat;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "=============== TEST3 ===============" << std::endl;
-	try
-	{
-		Bureaucrat	bureaucrat("Three", 0);
-		std::cout << bureaucrat;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "=============== TEST4 ===============" << std::endl;
-	try
-	{
-		Bureaucrat	bureaucrat("Four", 151);
-		std::cout << bureaucrat;
+		bureaucrat.signForm(form);
+		std::cout << form;
+		bureaucrat.signForm(form);
 	}
 	catch (std::exception &e)
 	{

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:26 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 21:00:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:24:07 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class Form
 
 		std::string const	getName() const;
 		bool				getSigned() const;
-		int const			getGradeToSign() const;
-		int const			getGradeToExecute() const;
+		int					getGradeToSign() const;
+		int					getGradeToExecute() const;
 
 		void	beSigned(Bureaucrat const &bureaucrat);
 
