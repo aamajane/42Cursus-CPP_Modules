@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 16:41:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:42:29 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	main()
 	std::cout << "=============== TEST1 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("One", 1);
+		Bureaucrat	bureaucrat("One", 2);
+		std::cout << bureaucrat;
+		bureaucrat.incrementGrade();
 		std::cout << bureaucrat;
 		bureaucrat.incrementGrade();
 		std::cout << bureaucrat;
@@ -30,7 +32,9 @@ int	main()
 	std::cout << "=============== TEST2 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("Tow", 150);
+		Bureaucrat	bureaucrat("Tow", 149);
+		std::cout << bureaucrat;
+		bureaucrat.decrementGrade();
 		std::cout << bureaucrat;
 		bureaucrat.decrementGrade();
 		std::cout << bureaucrat;
