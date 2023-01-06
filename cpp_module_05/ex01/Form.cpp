@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:29 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 21:43:37 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 22:30:54 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ std::ostream	&operator<<(std::ostream &out, Form const &form)
 	<< (form.getSigned() ? "signed" : "unsigned") 
 	<< ", it requires a grade of " << form.getGradeToSign() 
 	<< " to be signed and a grade of " << form.getGradeToExecute() 
-	<< " to be executed." << std::endl;
+	<< " to be executed" << std::endl;
 	return out;
 }
