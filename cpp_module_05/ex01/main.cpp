@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 21:52:24 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:55:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main()
 {
 	try
 	{
-		Bureaucrat	bureaucrat("OMAR", 2);
-		Form		form("Birth Certificate", 1, 1);
+		Bureaucrat	bureaucrat("OMAR", 3);
+		Form		form("Birth Certificate", 2, 1);
 	
 		std::cout << bureaucrat;
 		std::cout << form;
