@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 16:47:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:29:31 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main()
 	std::cout << "=============== TEST1 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("One", 2);
+		Bureaucrat	bureaucrat("OMAR", 2);
 		std::cout << bureaucrat;
 		bureaucrat.incrementGrade();
 		std::cout << bureaucrat;
@@ -32,7 +32,7 @@ int	main()
 	std::cout << "=============== TEST2 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("Tow", 149);
+		Bureaucrat	bureaucrat("AYOUB", 149);
 		std::cout << bureaucrat;
 		bureaucrat.decrementGrade();
 		std::cout << bureaucrat;
@@ -47,7 +47,7 @@ int	main()
 	std::cout << "=============== TEST3 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("Three", 0);
+		Bureaucrat	bureaucrat("ANASS", 0);
 		std::cout << bureaucrat;
 	}
 	catch (std::exception &e)
@@ -58,7 +58,7 @@ int	main()
 	std::cout << "=============== TEST4 ===============" << std::endl;
 	try
 	{
-		Bureaucrat	bureaucrat("Four", 151);
+		Bureaucrat	bureaucrat("MOHAMMED", 151);
 		std::cout << bureaucrat;
 	}
 	catch (std::exception &e)
