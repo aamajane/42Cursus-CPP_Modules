@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:14:01 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 16:23:05 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:24:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,17 @@ void	Bureaucrat::decrementGrade()
 		this->grade++;
 }
 
-const char *Bureaucrat::GradeTooHighException::what() const throw()
+const char	*Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "Grade too high";
 }
 
-const char *Bureaucrat::GradeTooLowException::what() const throw()
+const char	*Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
 }
 
-std::ostream &operator<<(std::ostream &out, Bureaucrat const &bureaucrat)
+std::ostream	&operator<<(std::ostream &out, Bureaucrat const &bureaucrat)
 {
 	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << std::endl;
 	return out;
