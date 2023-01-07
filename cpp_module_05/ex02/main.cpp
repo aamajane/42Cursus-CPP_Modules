@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 00:15:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:27:30 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,23 @@
 
 int	main(int ac, char **av)
 {
-	if (ac != 3)
-		std::cout << "Usage: ./program [Test number] [Bureaucrat grade]" << std::endl;
+	if (ac != 5)
+	{
+		std::cout << "Usage: ./program [Target] [Bureaucrat name] [Bureaucrat grade] [Test number]" << std::endl;
+		return 0;
+	}
 
-	else if (atoi(av[1]) == 1)
+	std::string	target = av[1];
+	std::string	name = av[2];
+	int			grade = atoi(av[3]);
+	int			test = atoi(av[4]);
+
+	if (test == 1)
 	{
 		try
 		{
-			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
-			Form		*form = new ShrubberyCreationForm("home");
+			Form		*form = new ShrubberyCreationForm(target);
+			Bureaucrat	*bureaucrat = new Bureaucrat(name, grade);
 
 			std::cout << *bureaucrat;
 			std::cout << *form;
@@ -44,12 +52,12 @@ int	main(int ac, char **av)
 		}
 	}
 
-	else if (atoi(av[1]) == 2)
+	else if (test == 2)
 	{
 		try
 		{
-			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
-			Form		*form = new RobotomyRequestForm("home");
+			Form		*form = new RobotomyRequestForm(target);
+			Bureaucrat	*bureaucrat = new Bureaucrat(name, grade);
 
 			std::cout << *bureaucrat;
 			std::cout << *form;
@@ -67,12 +75,12 @@ int	main(int ac, char **av)
 		}
 	}
 
-	else if (atoi(av[1]) == 3)
+	else if (test == 3)
 	{
 		try
 		{
-			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
-			Form		*form = new PresidentialPardonForm("home");
+			Form		*form = new PresidentialPardonForm(target);
+			Bureaucrat	*bureaucrat = new Bureaucrat(name, grade);
 
 			std::cout << *bureaucrat;
 			std::cout << *form;
