@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 21:21:36 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 21:39:44 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:51:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class RobotomyRequestForm : public Form
 
 	public:
 		RobotomyRequestForm(std::string target);
-		virtual ~RobotomyRequestForm();
+		~RobotomyRequestForm();
 
-		void	execute(Bureaucrat const &executor) const;
+		void	action() const;
 
 		class FailedException : public std::exception
 		{

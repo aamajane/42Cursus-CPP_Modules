@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:21 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 21:32:56 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:51:17 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class ShrubberyCreationForm : public Form
 
 	public:
 		ShrubberyCreationForm(std::string target);
-		virtual ~ShrubberyCreationForm();
+		~ShrubberyCreationForm();
 
-		void	execute(Bureaucrat const &executor) const;
+		void	action() const;
 
 		class OpenException : public std::exception
 		{

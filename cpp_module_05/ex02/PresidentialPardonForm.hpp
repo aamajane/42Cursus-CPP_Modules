@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 22:59:27 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 23:24:50 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:51:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class PresidentialPardonForm : public Form
 
 	public:
 		PresidentialPardonForm(std::string target);
-		virtual ~PresidentialPardonForm();
+		~PresidentialPardonForm();
 
-		void	execute(Bureaucrat const &executor) const;
+		void	action() const;
 
 		class NothingdException : public std::exception
 		{

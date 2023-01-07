@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 23:12:28 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:31:49 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,8 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {}
 
-void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
+void	ShrubberyCreationForm::action() const
 {
-	if (this->getSigned() == false)
-		throw Form::UnsignedException();
-	if (executor.getGrade() > this->getGradeToExecute())
-		throw Form::GradeTooLowException();
 	std::ofstream file;
 	file.open(this->_target + "_shrubbery");
 	if (!file.is_open())
