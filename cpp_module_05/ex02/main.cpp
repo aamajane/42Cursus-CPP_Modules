@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 23:47:48 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:08:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,75 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-int	main()
+int	main(int ac, char **av)
 {
-	try
-	{
-		Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", 1);
-		Form		*form = new ShrubberyCreationForm("home");
+	if (ac != 3)
+		std::cout << "Usage: ./program [Test number] [Bureaucrat grade]" << std::endl;
 
-		std::cout << *bureaucrat;
-		std::cout << *form;
-		bureaucrat->signForm(*form);
-		std::cout << *form;
-		bureaucrat->executeForm(*form);
-		delete bureaucrat;
-		delete form;
-	}
-	catch (std::exception &e)
+	else if (atoi(av[1]) == 1)
 	{
-		std::cout << e.what() << std::endl;
+		try
+		{
+			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
+			Form		*form = new ShrubberyCreationForm("HOME");
+
+			std::cout << *bureaucrat;
+			std::cout << *form;
+			bureaucrat->signForm(*form);
+			std::cout << *form;
+			bureaucrat->executeForm(*form);
+
+			delete bureaucrat;
+			delete form;
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
+
+	else if (atoi(av[1]) == 2)
+	{
+		try
+		{
+			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
+			Form		*form = new RobotomyRequestForm("HOME");
+
+			std::cout << *bureaucrat;
+			std::cout << *form;
+			bureaucrat->signForm(*form);
+			std::cout << *form;
+			bureaucrat->executeForm(*form);
+
+			delete bureaucrat;
+			delete form;
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
+
+	else if (atoi(av[1]) == 3)
+	{
+		try
+		{
+			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
+			Form		*form = new PresidentialPardonForm("HOME");
+
+			std::cout << *bureaucrat;
+			std::cout << *form;
+			bureaucrat->signForm(*form);
+			std::cout << *form;
+			bureaucrat->executeForm(*form);
+
+			delete bureaucrat;
+			delete form;
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
 	}
 
 	return 0;
