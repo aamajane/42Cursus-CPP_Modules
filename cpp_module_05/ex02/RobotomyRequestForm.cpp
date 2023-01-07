@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 21:21:40 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 23:32:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:30:16 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	RobotomyRequestForm::action() const
 	if (rand() % 2)
 		std::cout << this->_target << " has been robotomized successfully" << std::endl;
 	else
-		throw RobotomyRequestForm::FailedException();
+		std::cout << "The robotomy failed" << std::endl;
 }
 
-const char	*RobotomyRequestForm::FailedException::what() const throw()
+const char	*RobotomyRequestForm::NothingException::what() const throw()
 {
-	return "The robotomy failed";
+	return "Nothing happened";
 }
