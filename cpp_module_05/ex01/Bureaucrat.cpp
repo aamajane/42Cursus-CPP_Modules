@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:14:01 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 21:05:34 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:49:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,14 @@ void	Bureaucrat::incrementGrade()
 		this->_grade--;
 }
 
+void	Bureaucrat::decrementGrade()
+{
+	if (this->_grade + 1 > 150)
+		throw Bureaucrat::GradeTooLowException();
+	else
+		this->_grade++;
+}
+
 void	Bureaucrat::signForm(Form &form)
 {
 	try
@@ -54,14 +62,6 @@ void	Bureaucrat::signForm(Form &form)
 		std::cout << this->_name << " couldn't sign " << form.getName() 
 		<< " because " << e.what() << std::endl;
 	}
-}
-
-void	Bureaucrat::decrementGrade()
-{
-	if (this->_grade + 1 > 150)
-		throw Bureaucrat::GradeTooLowException();
-	else
-		this->_grade++;
 }
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()
