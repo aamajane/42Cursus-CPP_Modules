@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:21 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 20:36:50 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/07 21:32:56 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,19 @@ class ShrubberyCreationForm : public Form
 		class OpenException : public std::exception
 		{
 			public:
-				virtual const char *what() const throw();
+				virtual const char	*what() const throw();
 		};
 
 		class WriteException : public std::exception
 		{
 			public:
-				virtual const char *what() const throw();
+				virtual const char	*what() const throw();
 		};
 
 		class CloseException : public std::exception
 		{
 			public:
-				virtual const char *what() const throw();
+				virtual const char	*what() const throw();
 		};
 };
 
