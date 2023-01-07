@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 00:38:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:55:36 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,20 @@ int	main(int ac, char **av)
 {
 	if (ac != 5)
 	{
-		std::cout << "Usage: ./program [Target] [Bureaucrat name] [Bureaucrat grade] [Test number]" << std::endl;
+		std::cout << "Usage: "
+		<< "./program "
+		<< "[Test number]"
+		<< "[Target] "
+		<< "[Bureaucrat name] "
+		<< "[Bureaucrat grade] " << std::endl;
+
 		return 0;
 	}
 
-	std::string	target = av[1];
-	std::string	name = av[2];
-	int			grade = atoi(av[3]);
-	int			test = atoi(av[4]);
+	int			test = atoi(av[1]);
+	std::string	target = av[2];
+	std::string	name = av[3];
+	int			grade = atoi(av[4]);
 
 	if (test == 1)
 	{

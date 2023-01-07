@@ -6,19 +6,38 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 00:45:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:56:56 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-int	main()
+int	main(int ac, char **av)
 {
+	if (ac != 6)
+	{
+		std::cout << "Usage: "
+		<< "./program "
+		<< "[Bureaucrat name] "
+		<< "[Bureaucrat grade] "
+		<< "[Form name] "
+		<< "[Grade to sign] "
+		<< "[Grade to excute]" << std::endl;
+
+		return 0;
+	}
+
 	try
 	{
-		Bureaucrat	bureaucrat("OMAR", 3);
-		Form		form("Birth Certificate", 2, 1);
+		std::string	name = av[1];
+		int			grade = atoi(av[2]);
+		std::string	formName = av[3];
+		int			gradeToSign = atoi(av[4]);
+		int			gradeToExecute = atoi(av[5]);
+
+		Bureaucrat	bureaucrat(name, grade);
+		Form		form(formName, gradeToSign, gradeToExecute);
 	
 		std::cout << bureaucrat;
 		std::cout << form;
