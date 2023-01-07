@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 00:08:14 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 00:15:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ int	main(int ac, char **av)
 		try
 		{
 			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
-			Form		*form = new ShrubberyCreationForm("HOME");
+			Form		*form = new ShrubberyCreationForm("home");
 
 			std::cout << *bureaucrat;
 			std::cout << *form;
+			bureaucrat->executeForm(*form);
 			bureaucrat->signForm(*form);
 			std::cout << *form;
 			bureaucrat->executeForm(*form);
@@ -48,10 +49,11 @@ int	main(int ac, char **av)
 		try
 		{
 			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
-			Form		*form = new RobotomyRequestForm("HOME");
+			Form		*form = new RobotomyRequestForm("home");
 
 			std::cout << *bureaucrat;
 			std::cout << *form;
+			bureaucrat->executeForm(*form);
 			bureaucrat->signForm(*form);
 			std::cout << *form;
 			bureaucrat->executeForm(*form);
@@ -70,10 +72,11 @@ int	main(int ac, char **av)
 		try
 		{
 			Bureaucrat	*bureaucrat = new Bureaucrat("OMAR", atoi(av[2]));
-			Form		*form = new PresidentialPardonForm("HOME");
+			Form		*form = new PresidentialPardonForm("home");
 
 			std::cout << *bureaucrat;
 			std::cout << *form;
+			bureaucrat->executeForm(*form);
 			bureaucrat->signForm(*form);
 			std::cout << *form;
 			bureaucrat->executeForm(*form);
