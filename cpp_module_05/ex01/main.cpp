@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 01:01:53 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 01:03:18 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 		<< "[Bureaucrat grade] "
 		<< "[Form name] "
 		<< "[Grade to sign] "
-		<< "[Grade to excute]" << std::endl;
+		<< "[Grade to execute]" << std::endl;
 
 		return 0;
 	}
