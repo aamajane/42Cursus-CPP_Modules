@@ -6,11 +6,26 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 01:26:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 19:54:06 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 23:01:49 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+
+Intern::Intern() {}
+
+Intern::Intern(Intern const &copy)
+{
+	*this = copy;
+}
+
+Intern &Intern::operator=(Intern const &rhs)
+{
+	(void)rhs;
+	return *this;
+}
+
+Intern::~Intern() {}
 
 Form	*Intern::makeShrubberyCreationForm(std::string const &target)
 {
