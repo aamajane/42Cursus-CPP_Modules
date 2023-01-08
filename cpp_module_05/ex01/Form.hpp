@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:26 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/06 21:24:07 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 16:22:16 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,19 @@ class Form
 		class GradeTooHighException : public std::exception
 		{
 			public:
-				virtual const char	*what() const throw();
+				const char	*what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception
 		{
 			public:
-				virtual const char	*what() const throw();
+				const char	*what() const throw();
 		};
 
 		class AlreadySignedException : public std::exception
 		{
 			public:
-				virtual const char	*what() const throw();
+				const char	*what() const throw();
 		};
 };
 

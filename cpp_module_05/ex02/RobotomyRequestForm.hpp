@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 21:21:36 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 02:14:16 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 16:23:06 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class RobotomyRequestForm : public Form
 		class NothingException : public std::exception
 		{
 			public:
-				virtual const char	*what() const throw();
+				const char	*what() const throw();
 		};
 };
 
