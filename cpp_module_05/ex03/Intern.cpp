@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 01:26:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 02:37:25 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 19:54:06 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ Form	*Intern::makePresidentialPardonForm(std::string const &target)
 
 Form	*Intern::makeForm(std::string const &name, std::string const &target)
 {
-	Form	*(Intern::*f[3])(std::string const &target) = 
-							{&Intern::makeShrubberyCreationForm, 
-							&Intern::makeRobotomyRequestForm, 
-							&Intern::makePresidentialPardonForm};
+	Form	*(Intern::*f[3])(std::string const &target) = {
+								&Intern::makeShrubberyCreationForm, 
+								&Intern::makeRobotomyRequestForm, 
+								&Intern::makePresidentialPardonForm};
+
 	std::string	formNames[3] = {"shrubbery creation", 
 								"robotomy request", 
 								"presidential pardon"};
