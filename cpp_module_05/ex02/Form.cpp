@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:29 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 23:33:04 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 02:33:50 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	Form::beSigned(Bureaucrat const &bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->_gradeToSign)
 		throw Form::GradeTooLowException();
-	else if (this->_signed)
+	else if (this->_signed == true)
 		throw Form::AlreadySignedException();
 	else
 		this->_signed = true;

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 00:12:10 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 02:32:48 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void	ShrubberyCreationForm::action() const
 {
-	std::ofstream file;
+	std::ofstream	file;
+
 	file.open(this->_target + "_shrubbery");
 	if (!file.is_open())
 		throw ShrubberyCreationForm::OpenException();
+
 	file << "                  +                       " << std::endl;
 	file << "                  #                       " << std::endl;
 	file << "                 ###                      " << std::endl;
@@ -44,6 +46,7 @@ void	ShrubberyCreationForm::action() const
 	file << "................O000O....................." << std::endl;
 	if (file.bad())
 		throw ShrubberyCreationForm::WriteException();
+
 	file.close();
 	if (file.bad())
 		throw ShrubberyCreationForm::CloseException();
