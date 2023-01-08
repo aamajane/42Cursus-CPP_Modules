@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 00:59:55 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 01:01:53 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ int	main(int ac, char **av)
 
 	try
 	{
-		std::string	bureaucratName = av[1];
-		int			bureaucratGrade = atoi(av[2]);
+		std::string	name = av[1];
+		int			grade = atoi(av[2]);
 		std::string	formName = av[3];
 		int			gradeToSign = atoi(av[4]);
 		int			gradeToExecute = atoi(av[5]);
 
-		Bureaucrat	bureaucrat(bureaucratName, bureaucratGrade);
+		Bureaucrat	bureaucrat(name, grade);
 		Form		form(formName, gradeToSign, gradeToExecute);
 	
 		std::cout << bureaucrat;
