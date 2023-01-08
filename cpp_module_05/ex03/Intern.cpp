@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 01:26:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 02:35:24 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 02:37:25 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@ Form	*Intern::makeForm(std::string const &name, std::string const &target)
 	for (int i = 0; i < 3; i++)
 	{
 		if (name == formNames[i])
+		{
+			std::cout << "Intern creates " << name << std::endl;
 			return (this->*f[i])(target);
+		}
 	}
 	throw Intern::UnknownFormException();
 }
