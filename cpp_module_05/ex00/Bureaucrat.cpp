@@ -6,11 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:14:01 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 20:12:29 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 22:43:05 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat() {}
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name)
 {
@@ -20,6 +22,17 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name)
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_grade = grade;
+}
+
+Bureaucrat::Bureaucrat(Bureaucrat const &copy) : _name(copy._name)
+{
+	*this = copy;
+}
+
+Bureaucrat &Bureaucrat::operator=(Bureaucrat const &rhs)
+{
+	this->_grade = rhs._grade;
+	return *this;
 }
 
 Bureaucrat::~Bureaucrat() {}
