@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 22:59:27 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/07 23:51:26 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 02:14:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define PRESIDENTIALPARDONFORM_HPP
 
 #include <iostream>
+#include <exception>
 #include "Form.hpp"
 
 class PresidentialPardonForm : public Form
