@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 02:32:48 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 19:31:55 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,15 @@ void	ShrubberyCreationForm::action() const
 
 const char	*ShrubberyCreationForm::OpenException::what() const throw()
 {
-	return "Error: File could not be opened";
+	return "File could not be opened";
 }
 
 const char	*ShrubberyCreationForm::WriteException::what() const throw()
 {
-	return "Error: File could not be written";
+	return "File could not be written";
 }
 
 const char	*ShrubberyCreationForm::CloseException::what() const throw()
 {
-	return "Error: File could not be closed";
+	return "File could not be closed";
 }
