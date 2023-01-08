@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:21 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 22:59:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 23:08:29 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ class ShrubberyCreationForm : public Form
 	private:
 		std::string	_target;
 
-		ShrubberyCreationForm();
-
 	public:
+		ShrubberyCreationForm();
 		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(ShrubberyCreationForm const &copy);
 		ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
