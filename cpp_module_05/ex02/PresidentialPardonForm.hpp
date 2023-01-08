@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 22:59:27 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 22:57:19 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 23:06:50 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ class PresidentialPardonForm : public Form
 	private:
 		std::string	_target;
 
-		PresidentialPardonForm();
-
 	public:
+		PresidentialPardonForm();
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(PresidentialPardonForm const &copy);
 		PresidentialPardonForm &operator=(PresidentialPardonForm const &rhs);
