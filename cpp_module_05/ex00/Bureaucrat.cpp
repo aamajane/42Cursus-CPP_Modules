@@ -6,20 +6,20 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:14:01 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 18:07:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 18:58:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string const &name, int grade) :
-	_name(name),
-	_grade(grade)
+Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name)
 {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
+	else
+		this->_grade = grade;
 }
 
 Bureaucrat::~Bureaucrat() {}
