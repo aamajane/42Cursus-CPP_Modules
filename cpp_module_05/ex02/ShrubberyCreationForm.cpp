@@ -6,16 +6,33 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 19:54:24 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 19:31:42 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 22:56:55 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
+ShrubberyCreationForm::ShrubberyCreationForm() :
+	Form("ShrubberyCreationForm", 145, 137),
+	_target("default")
+{}
+
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :
 	Form("ShrubberyCreationForm", 145, 137),
 	_target(target)
 {}
+
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &copy) :
+	Form(copy),
+	_target(copy._target)
+{}
+
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
+{
+	Form::operator=(rhs);
+	this->_target = rhs._target;
+	return *this;
+}
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {}
