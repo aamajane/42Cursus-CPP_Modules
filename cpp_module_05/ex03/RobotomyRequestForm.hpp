@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 21:21:36 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 16:24:04 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 19:39:24 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <exception>
-#include <random>
+#include <cstdlib>
 #include "Form.hpp"
 
 class RobotomyRequestForm : public Form
