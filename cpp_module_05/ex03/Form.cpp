@@ -6,11 +6,18 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:29 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 02:34:02 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 22:52:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form() : 
+	_name("default"),
+	_signed(false),
+	_gradeToSign(150),
+	_gradeToExecute(150)
+{}
 
 Form::Form(std::string const &name, int gradeToSign, int gradeToExecute) :
 	_name(name),
@@ -22,6 +29,21 @@ Form::Form(std::string const &name, int gradeToSign, int gradeToExecute) :
 		throw Form::GradeTooHighException();
 	else if (gradeToSign > 150 || gradeToExecute > 150)
 		throw Form::GradeTooLowException();
+}
+
+Form::Form(Form const &copy) :
+	_name(copy._name),
+	_signed(copy._signed),
+	_gradeToSign(copy._gradeToSign),
+	_gradeToExecute(copy._gradeToExecute)
+{
+	*this = copy;
+}
+
+Form &Form::operator=(Form const &rhs)
+{
+	this->_signed = rhs._signed;
+	return *this;
 }
 
 Form::~Form() {}

@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:26 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 19:20:07 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/08 22:46:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,12 @@ class Form
 		int const			_gradeToSign;
 		int const			_gradeToExecute;
 
+		Form();
+
 	public:
 		Form(std::string const &name, int gradeToSign, int gradeToExecute);
+		Form(Form const &copy);
+		Form &operator=(Form const &rhs);
 		~Form();
 
 		std::string const	getName() const;
