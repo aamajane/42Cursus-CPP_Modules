@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:13:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 01:21:19 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/09 21:04:51 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int ac, char **av)
 	{
 		std::cout << "Usage: "
 		<< "./program "
-		<< "[Test number]"
+		<< "[Test number] "
 		<< "[Target] "
 		<< "[Bureaucrat name] "
 		<< "[Bureaucrat grade] " << std::endl;
