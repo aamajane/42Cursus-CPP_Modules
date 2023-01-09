@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:25:29 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/08 22:51:52 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/09 20:55:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Form::Form() :
 	_gradeToExecute(150)
 {}
 
-Form::Form(std::string const &name, int gradeToSign, int gradeToExecute) :
+Form::Form(std::string const name, int gradeToSign, int gradeToExecute) :
 	_name(name),
 	_signed(false),
 	_gradeToSign(gradeToSign),
