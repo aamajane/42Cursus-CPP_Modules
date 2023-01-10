@@ -6,25 +6,25 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:52 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/08 23:00:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:41:31 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void)
+PhoneBook::PhoneBook()
 {
 	std::cout << "***** Welcome to the PhoneBook *****" << std::endl;
 	_contactCount = 0;
 	_contactIndex = 0;
 }
 
-PhoneBook::~PhoneBook(void)
+PhoneBook::~PhoneBook()
 {
 	std::cout << "***** Thank you for using the PhoneBook *****" << std::endl;
 }
 
-void PhoneBook::addContact(void)
+void	PhoneBook::addContact()
 {
 	_contacts[_contactIndex++].addContact();
 	if (_contactIndex == 8)
@@ -33,7 +33,7 @@ void PhoneBook::addContact(void)
 		_contactCount++;
 }
 
-void PhoneBook::searchContact(void)
+void	PhoneBook::searchContact()
 {
 	if (_contactCount == 0)
 	{

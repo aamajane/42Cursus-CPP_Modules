@@ -6,13 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:42 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/08 22:58:33 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:40:21 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(void)
+Contact::Contact()
 {
 	_preData[0] = "First name: ";
 	_preData[1] = "Last name: ";
@@ -21,7 +21,7 @@ Contact::Contact(void)
 	_preData[4] = "Darkest secret: ";
 }
 
-void Contact::addContact(void)
+void	Contact::addContact()
 {
 	for (int i = 0; i < 5; i++)
 	{
@@ -36,7 +36,7 @@ void Contact::addContact(void)
 	}
 }
 
-void Contact::printContact(void)
+void	Contact::printContact()
 {
 	for (int i = 0; i < 3; i++)
 	{
@@ -50,7 +50,7 @@ void Contact::printContact(void)
 	std::cout << std::endl;
 }
 
-void Contact::printAll(void)
+void	Contact::printAll()
 {
 	for (int i = 0; i < 5; i++)
 		std::cout << _preData[i] << _data[i] << std::endl;

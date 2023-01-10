@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:19:55 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/08 23:00:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:41:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@
 class PhoneBook
 {
 	private:
-		Contact _contacts[8];
-		int _contactCount;
-		int _contactIndex;
+		Contact	_contacts[8];
+		int		_contactCount;
+		int		_contactIndex;
 
 	public:
-		PhoneBook(void);
-		~PhoneBook(void);
-		void addContact(void);
-		void searchContact(void);
+		PhoneBook();
+		~PhoneBook();
+
+		void	addContact();
+		void	searchContact();
 };
 
 #endif

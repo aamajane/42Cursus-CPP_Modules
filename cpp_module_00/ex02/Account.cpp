@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:18:20 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/08 23:01:51 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:44:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
-Account::Account(void) {}
+Account::Account() {}
 
 Account::Account(int initial_deposit)
 {
@@ -35,7 +35,7 @@ Account::Account(int initial_deposit)
 	std::cout << "created" << std::endl;
 }
 
-Account::~Account(void)
+Account::~Account()
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -43,7 +43,7 @@ Account::~Account(void)
 	std::cout << "closed" << std::endl;
 }
 
-void Account::_displayTimestamp(void)
+void	Account::_displayTimestamp()
 {
 	time_t currentTime = time(NULL);
 	struct tm *now = localtime(&currentTime);
@@ -55,7 +55,7 @@ void Account::_displayTimestamp(void)
 	std::cout << std::setw(2) << std::setfill('0') << now->tm_sec << "] ";
 }
 
-void Account::displayAccountsInfos(void)
+void	Account::displayAccountsInfos()
 {
 	_displayTimestamp();
 	std::cout << "accounts:" << _nbAccounts << ";";
@@ -64,7 +64,7 @@ void Account::displayAccountsInfos(void)
 	std::cout << "withdrawals:" << _totalNbWithdrawals << std::endl;
 }
 
-void Account::displayStatus(void) const
+void	Account::displayStatus() const
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -73,7 +73,7 @@ void Account::displayStatus(void) const
 	std::cout << "withdrawals:" << _nbWithdrawals << std::endl;
 }
 
-void Account::makeDeposit(int deposit)
+void	Account::makeDeposit(int deposit)
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -87,7 +87,7 @@ void Account::makeDeposit(int deposit)
 	std::cout << "nb_deposits:" << _nbDeposits << std::endl;
 }
 
-bool Account::makeWithdrawal(int withdrawal)
+bool	Account::makeWithdrawal(int withdrawal)
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -110,27 +110,27 @@ bool Account::makeWithdrawal(int withdrawal)
 	}
 }
 
-int Account::checkAmount(void) const
+int	Account::checkAmount() const
 {
 	return _amount;
 }
 
-int Account::getNbAccounts(void)
+int	Account::getNbAccounts()
 {
 	return _nbAccounts;
 }
 
-int Account::getTotalAmount(void)
+int	Account::getTotalAmount()
 {
 	return _totalAmount;
 }
 
-int Account::getNbDeposits(void)
+int	Account::getNbDeposits()
 {
 	return _totalNbDeposits;
 }
 
-int Account::getNbWithdrawals(void)
+int	Account::getNbWithdrawals()
 {
 	return _totalNbWithdrawals;
 }
