@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:10:30 by aamajane          #+#    #+#             */
-/*   Updated: 2022/12/08 20:59:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:50:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void HumanB::setWeapon(Weapon &weapon)
 	this->weapon = &weapon;
 }
 
-void HumanB::attack()
+void	HumanB::attack()
 {
 	if (weapon)
 		std::cout << name << " attacks with their " << weapon->getType() << std::endl;

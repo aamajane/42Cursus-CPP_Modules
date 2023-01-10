@@ -6,15 +6,16 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:43 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/25 13:44:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:54:34 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	Harl harl;
+	Harl	harl;
+
 	if (ac == 2)
 		harl.complain(av[1]);
 	else

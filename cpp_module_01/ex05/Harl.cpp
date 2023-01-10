@@ -6,36 +6,37 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:36:39 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/26 17:14:08 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:52:56 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-void Harl::debug(void)
+void	Harl::debug()
 {
 	std::cout << "Debug comment" << std::endl;
 }
 
-void Harl::info(void)
+void	Harl::info()
 {
 	std::cout << "Info comment" << std::endl;
 }
 
-void Harl::warning(void)
+void	Harl::warning()
 {
 	std::cout << "Warning comment" << std::endl;
 }
 
-void Harl::error(void)
+void	Harl::error()
 {
 	std::cout << "Error comment" << std::endl;
 }
 
-void Harl::complain(std::string level)
+void	Harl::complain(std::string level)
 {
-	void (Harl::*harlPtr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void		(Harl::*harlPtr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
 	for (int i = 0; i < 4; i++)
 	{
 		if (level == levels[i])

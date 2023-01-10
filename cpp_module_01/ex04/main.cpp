@@ -6,25 +6,27 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:12:03 by aamajane          #+#    #+#             */
-/*   Updated: 2022/11/28 14:49:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:52:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (ac == 4)
 	{
-		std::string filename = av[1];
-		std::string s1 = av[2];
-		std::string s2 = av[3];
-		std::ifstream file(filename);
+		std::string		filename = av[1];
+		std::string		s1 = av[2];
+		std::string		s2 = av[3];
+		std::ifstream	file(filename);
+
 		if(file.is_open())
 		{
-			std::ofstream newFile(filename + ".replace");
-			std::string line;
+			std::ofstream	newFile(filename + ".replace");
+			std::string		line;
+
 			while (std::getline(file, line))
 			{
 				size_t pos = 0;
