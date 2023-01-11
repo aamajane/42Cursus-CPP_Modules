@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/11 23:05:08 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/11 23:13:46 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,10 @@ bool	isInt(std::string s)
 
 bool	isFloat(std::string s)
 {
+	int	dot = 0;
+
 	if (s == "-inff" || s == "+inff" || s == "nanf")
 		return true;
-	int	dot = 0;
 	if (s.at(0) == '-' || s.at(0) == '+')
 		s = s.substr(1);
 	for (size_t i = 0; i < s.length() - 1; i++)
@@ -62,9 +63,10 @@ bool	isFloat(std::string s)
 
 bool	isDouble(std::string s)
 {
+	int	dot = 0;
+
 	if (s == "-inf" || s == "+inf" || s == "nan")
 		return true;
-	int	dot = 0;
 	if (s.at(0) == '-' || s.at(0) == '+')
 		s = s.substr(1);
 	for (size_t i = 0; i < s.length(); i++)
@@ -96,6 +98,7 @@ int	detectType(std::string s)
 void	convertFromChar(std::string s)
 {
 	char	c = s.at(1);
+
 	std::cout << "char   : " << c << std::endl;
 	std::cout << "int    : " << static_cast<int>(c) << std::endl;
 	std::cout << "float  : " << static_cast<float>(c) << ".0f" << std::endl;
@@ -105,6 +108,7 @@ void	convertFromChar(std::string s)
 void	convertFromInt(std::string s)
 {
 	long	n = std::stol(s);
+
 	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
 		std::cout << "char   : impossible" << std::endl;
 	else if (std::isprint(n))
@@ -122,6 +126,7 @@ void	convertFromInt(std::string s)
 void	convertFromFloat(std::string s)
 {
 	float	n = std::stof(s);
+
 	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
 		std::cout << "char   : impossible" << std::endl;
 	else if (std::isprint(static_cast<int>(n)))
@@ -139,6 +144,7 @@ void	convertFromFloat(std::string s)
 void	convertFromDouble(std::string s)
 {
 	double	n = std::stod(s);
+
 	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
 		std::cout << "char   : impossible" << std::endl;
 	else if (std::isprint(static_cast<int>(n)))
@@ -159,18 +165,23 @@ void	convertFromDouble(std::string s)
 int	main(int ac, char **av)
 {
 	if (ac != 2)
-	{
 		std::cout << "Usage: ./convert [string]" << std::endl;
-		return 0;
-	}
-	std::string	s = av[1];
-	int	type = detectType(s);
-	if (type == IMPOSSIBLE)
+	else
 	{
-		std::cout << "impossible for all types" << std::endl;
-		return 0;
+		std::string	s = av[1];
+		int			type = detectType(s);
+
+		if (type == IMPOSSIBLE)
+			std::cout << "impossible for all types" << std::endl;
+		else
+		{
+			void	(*convert[4])(std::string) = {
+												convertFromChar, 
+												convertFromInt, 
+												convertFromFloat, 
+												convertFromDouble};
+			convert[type](s);
+		}
 	}
-	void	(*convert[4])(std::string) = {convertFromChar, convertFromInt, convertFromFloat, convertFromDouble};
-	convert[type](s);
 	return 0;
 }
