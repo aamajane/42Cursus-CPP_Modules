@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/11 23:13:46 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/11 23:18:37 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void	convertFromChar(std::string s)
 {
 	char	c = s.at(1);
 
-	std::cout << "char   : " << c << std::endl;
+	std::cout << "char   : '" << c << "'" << std::endl;
 	std::cout << "int    : " << static_cast<int>(c) << std::endl;
 	std::cout << "float  : " << static_cast<float>(c) << ".0f" << std::endl;
 	std::cout << "double : " << static_cast<double>(c) << ".0" << std::endl;
@@ -112,7 +112,7 @@ void	convertFromInt(std::string s)
 	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
 		std::cout << "char   : impossible" << std::endl;
 	else if (std::isprint(n))
-		std::cout << "char   : " << static_cast<char>(n) << std::endl;
+		std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
 	else
 		std::cout << "char   : Non displayable" << std::endl;
 	if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
@@ -130,7 +130,7 @@ void	convertFromFloat(std::string s)
 	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
 		std::cout << "char   : impossible" << std::endl;
 	else if (std::isprint(static_cast<int>(n)))
-		std::cout << "char   : " << static_cast<char>(n) << std::endl;
+		std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
 	else
 		std::cout << "char   : Non displayable" << std::endl;
 	if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
@@ -148,7 +148,7 @@ void	convertFromDouble(std::string s)
 	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
 		std::cout << "char   : impossible" << std::endl;
 	else if (std::isprint(static_cast<int>(n)))
-		std::cout << "char   : " << static_cast<char>(n) << std::endl;
+		std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
 	else
 		std::cout << "char   : Non displayable" << std::endl;
 	if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
