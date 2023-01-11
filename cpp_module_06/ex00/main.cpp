@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/11 23:18:37 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/11 23:22:45 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,11 +175,10 @@ int	main(int ac, char **av)
 			std::cout << "impossible for all types" << std::endl;
 		else
 		{
-			void	(*convert[4])(std::string) = {
-												convertFromChar, 
-												convertFromInt, 
-												convertFromFloat, 
-												convertFromDouble};
+			void	(*convert[4])(std::string) = {convertFromChar, 
+												  convertFromInt, 
+												  convertFromFloat, 
+												  convertFromDouble};
 			convert[type](s);
 		}
 	}
