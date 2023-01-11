@@ -6,13 +6,12 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/11 23:57:41 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 00:00:56 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include <limits>
 
 #define CHAR		0
 #define INT			1
