@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/11 23:56:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/11 23:57:41 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,77 +105,56 @@ void	convertFromChar(std::string s)
 
 void	convertFromInt(std::string s)
 {
-	try
-	{
-		int	n = std::stoi(s);
+	int	n = std::stoi(s);
 
-		if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
-			std::cout << "char   : impossible" << std::endl;
-		else if (std::isprint(n))
-			std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
-		else
-			std::cout << "char   : Non displayable" << std::endl;
-		std::cout << "int    : " << static_cast<int>(n) << std::endl;
-		std::cout << "float  : " << static_cast<float>(n) << ".0f" << std::endl;
-		std::cout << "double : " << static_cast<double>(n) << ".0" << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << "impossible for all types" << std::endl;
-	}
+	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
+		std::cout << "char   : impossible" << std::endl;
+	else if (std::isprint(n))
+		std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
+	else
+		std::cout << "char   : Non displayable" << std::endl;
+	std::cout << "int    : " << static_cast<int>(n) << std::endl;
+	std::cout << "float  : " << static_cast<float>(n) << ".0f" << std::endl;
+	std::cout << "double : " << static_cast<double>(n) << ".0" << std::endl;
 }
 
 void	convertFromFloat(std::string s)
 {
-	try
-	{
-		float	n = std::stof(s);
+	float	n = std::stof(s);
 
-		if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
-			std::cout << "char   : impossible" << std::endl;
-		else if (std::isprint(static_cast<int>(n)))
-			std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
-		else
-			std::cout << "char   : Non displayable" << std::endl;
-		if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
-			std::cout << "int    : impossible" << std::endl;
-		else
-			std::cout << "int    : " << static_cast<int>(n) << std::endl;
-		std::cout << "float  : " << static_cast<float>(n) << "f" << std::endl;
-		std::cout << "double : " << static_cast<double>(n) << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << "impossible for all types" << std::endl;
-	}
+	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
+		std::cout << "char   : impossible" << std::endl;
+	else if (std::isprint(static_cast<int>(n)))
+		std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
+	else
+		std::cout << "char   : Non displayable" << std::endl;
+	if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
+		std::cout << "int    : impossible" << std::endl;
+	else
+		std::cout << "int    : " << static_cast<int>(n) << std::endl;
+	std::cout << "float  : " << static_cast<float>(n) << "f" << std::endl;
+	std::cout << "double : " << static_cast<double>(n) << std::endl;
 }
 
 void	convertFromDouble(std::string s)
 {
-	try
-	{
-		double	n = std::stod(s);
+	double	n = std::stod(s);
 
-		if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
-			std::cout << "char   : impossible" << std::endl;
-		else if (std::isprint(static_cast<int>(n)))
-			std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
-		else
-			std::cout << "char   : Non displayable" << std::endl;
-		if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
-			std::cout << "int    : impossible" << std::endl;
-		else
-			std::cout << "int    : " << static_cast<int>(n) << std::endl;
-		if (n < std::numeric_limits<float>::min() || n > std::numeric_limits<float>::max())
-			std::cout << "float  : impossible" << std::endl;
-		else
-			std::cout << "float  : " << static_cast<float>(n) << "f" << std::endl;
-		std::cout << "double : " << n << std::endl;
-	}
-	catch (std::exception &e)
-	{
-		std::cout << "impossible for all types" << std::endl;
-	}
+	if (n < std::numeric_limits<char>::min() || n > std::numeric_limits<char>::max())
+		std::cout << "char   : impossible" << std::endl;
+	else if (std::isprint(static_cast<int>(n)))
+		std::cout << "char   : '" << static_cast<char>(n) << "'" << std::endl;
+	else
+		std::cout << "char   : Non displayable" << std::endl;
+	if (n < std::numeric_limits<int>::min() || n > std::numeric_limits<int>::max())
+		std::cout << "int    : impossible" << std::endl;
+	else
+		std::cout << "int    : " << static_cast<int>(n) << std::endl;
+	if (n < std::numeric_limits<float>::min() || n > std::numeric_limits<float>::max())
+		std::cout << "float  : impossible" << std::endl;
+	else
+		std::cout << "float  : " << static_cast<float>(n) << "f" << std::endl;
+	std::cout << "double : " << n << std::endl;
 }
 
 int	main(int ac, char **av)
@@ -195,7 +174,14 @@ int	main(int ac, char **av)
 												  convertFromInt, 
 												  convertFromFloat, 
 												  convertFromDouble};
-			convert[type](s);
+			try
+			{
+				convert[type](s);
+			}
+			catch (std::exception &e)
+			{
+				std::cout << "impossible for all types" << std::endl;
+			}
 		}
 	}
 	return 0;
