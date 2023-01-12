@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:57:12 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 01:21:09 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 01:23:09 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int	main()
 	}
 	else
 		std::cout << "Failure!" << std::endl;
+	
+	delete data;
 	
 	return 0;
 }
