@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 01:30:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 01:45:14 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 01:46:17 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class C : public Base {};
 
 Base	*generate()
 {
-	int i = time(NULL) % 3;
+	int	i = time(NULL) % 3;
 
 	if (i == 0)
 		return (new A);
