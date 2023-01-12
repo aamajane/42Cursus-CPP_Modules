@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 01:30:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 18:40:30 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 22:31:41 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Base	*generate()
 		return new C;
 }
 
-void	identify(Base* p)
+void	identify(Base *p)
 {
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
@@ -48,7 +48,7 @@ void	identify(Base* p)
 		std::cout << "Base" << std::endl;
 }
 
-void	identify(Base& p)
+void	identify(Base &p)
 {
 	try
 	{
