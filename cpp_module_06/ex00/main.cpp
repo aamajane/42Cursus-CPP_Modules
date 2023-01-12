@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 15:16:12 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 17:51:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	detectType(std::string s)
 
 	for (size_t i = 0; i < s.length(); i++)
 	{
-		if (i == s.length() - 1 &&  (s.at(i) == 'f' || s.at(i) == 'F'))
+		if (i == s.length() - 1 &&  s.at(i) == 'f')
 			;
 		else if (s.at(i) == '.')
 			dot++;
@@ -45,7 +45,7 @@ int	detectType(std::string s)
 			return IMPOSSIBLE;
 	}
 
-	if (dot == 1 && (s.at(s.length() - 1) == 'f' || s.at(s.length() - 1) == 'F'))
+	if (dot == 1 && s.at(s.length() - 1) == 'f')
 		return FLOAT;
 	else if (dot == 1)
 		return DOUBLE;
