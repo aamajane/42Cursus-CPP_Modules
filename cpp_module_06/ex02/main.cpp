@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 01:30:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 01:44:13 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 01:45:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,24 +52,21 @@ void	identify(Base& p)
 {
 	try
 	{
-		A &a = dynamic_cast<A&>(p);
-		(void)a;
+		(void)dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		try
 		{
-			B &b = dynamic_cast<B&>(p);
-			(void)b;
+			(void)dynamic_cast<B&>(p);
 			std::cout << "B" << std::endl;
 		}
 		catch(const std::exception& e)
 		{
 			try
 			{
-				C &c = dynamic_cast<C&>(p);
-				(void)c;
+				(void) dynamic_cast<C&>(p);
 				std::cout << "C" << std::endl;
 			}
 			catch(const std::exception& e)
