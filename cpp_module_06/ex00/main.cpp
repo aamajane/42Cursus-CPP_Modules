@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 00:34:54 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 02:12:12 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,77 +18,40 @@
 #define DOUBLE		3
 #define IMPOSSIBLE	4
 
-bool	isChar(std::string s)
-{
-	if (s.length() == 3 && s.at(0) == '\'' && s.at(2) == '\'')
-		return true;
-	return false;
-}
-
-bool	isInt(std::string s)
-{
-	if (s.at(0) == '-' || s.at(0) == '+')
-		s = s.substr(1);
-	for (size_t i = 0; i < s.length(); i++)
-	{
-		if (s.at(i) < '0' || s.at(i) > '9')
-			return false;
-	}
-	return true;
-}
-
-bool	isFloat(std::string s)
-{
-	int	dot = 0;
-
-	if (s == "-inff" || s == "+inff" || s == "nanf")
-		return true;
-	if (s.at(0) == '-' || s.at(0) == '+')
-		s = s.substr(1);
-	for (size_t i = 0; i < s.length() - 1; i++)
-	{
-		if (s.at(i) == '.')
-			dot++;
-		else if (s.at(i) < '0' || s.at(i) > '9')
-			return false;
-	}
-	if (dot == 1 && (s.at(s.length() - 1) == 'f' || s.at(s.length() - 1) == 'F'))
-		return true;
-	return false;
-}
-
-bool	isDouble(std::string s)
-{
-	int	dot = 0;
-
-	if (s == "-inf" || s == "+inf" || s == "nan")
-		return true;
-	if (s.at(0) == '-' || s.at(0) == '+')
-		s = s.substr(1);
-	for (size_t i = 0; i < s.length(); i++)
-	{
-		if (s.at(i) == '.')
-			dot++;
-		else if (s.at(i) < '0' || s.at(i) > '9')
-			return false;
-	}
-	if (dot == 1)
-		return true;
-	return false;
-}
-
 int	detectType(std::string s)
 {
-	if (isChar(s))
+	if (s.length() == 3 && s.at(0) == '\'' && s.at(2) == '\'')
 		return CHAR;
-	else if (isInt(s))
-		return INT;
-	else if (isFloat(s))
+
+	if (s.at(0) == '-' || s.at(0) == '+')
+		s = s.substr(1);
+
+	if (s == "inff" || s == "nanf")
 		return FLOAT;
-	else if (isDouble(s))
+
+	if (s == "inf" || s == "nan")
+		return DOUBLE;
+
+	int	dot = 0;
+
+	for (size_t i = 0; i < s.length(); i++)
+	{
+		if (i == s.length() - 1 &&  (s.at(i) == 'f' || s.at(i) == 'F'))
+			;
+		else if (s.at(i) == '.')
+			dot++;
+		else if (s.at(i) < '0' || s.at(i) > '9')
+			return IMPOSSIBLE;
+	}
+
+	if (dot == 1 && (s.at(s.length() - 1) == 'f' || s.at(s.length() - 1) == 'F'))
+		return FLOAT;
+	else if (dot == 1)
 		return DOUBLE;
 	else
-		return IMPOSSIBLE;
+		return INT;
+
+	return IMPOSSIBLE;
 }
 
 void	convertFromChar(std::string s)
