@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:05:45 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 17:55:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 18:26:46 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	convert(int type, std::string s)
 	else
 		std::cout << "float  : " << static_cast<float>(n) << "f" << std::endl;
 
-	std::cout << "double : " << static_cast<double>(n) << "" << std::endl;
+	std::cout << "double : " << static_cast<double>(n) << std::endl;
 }
 
 int	main(int ac, char **av)
