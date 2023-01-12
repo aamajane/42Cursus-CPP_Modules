@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 01:30:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 01:46:17 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 01:48:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ Base	*generate()
 	int	i = time(NULL) % 3;
 
 	if (i == 0)
-		return (new A);
+		return new A;
 	else if (i == 1)
-		return (new B);
+		return new B;
 	else
-		return (new C);
+		return new C;
 }
 
 void	identify(Base* p)
