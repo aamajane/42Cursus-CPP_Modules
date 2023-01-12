@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:57:12 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 01:23:09 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 17:53:47 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int	main()
 
 		std::cout << "data adderss: " << data << std::endl;
 		std::cout << "des address : " << des << std::endl;
-
 		std::cout << "data string : " << data->s << std::endl;
 		std::cout << "des string  : " << des->s << std::endl;
 		std::cout << "data int    : " << data->n << std::endl;
