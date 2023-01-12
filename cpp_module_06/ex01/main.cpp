@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 00:57:12 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/12 17:53:47 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/12 17:55:01 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,11 @@ int	main()
 		std::cout << "des string  : " << des->s << std::endl;
 		std::cout << "data int    : " << data->n << std::endl;
 		std::cout << "des int     : " << des->n << std::endl;
-		
 	}
 	else
 		std::cout << "Failure!" << std::endl;
-	
+
 	delete data;
-	
+
 	return 0;
 }
