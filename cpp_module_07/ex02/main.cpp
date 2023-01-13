@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 01:31:05 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 02:37:36 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/13 02:39:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	main()
 	try
 	{
 		a[5] = 10;
+		std::cout << a[5] << std::endl;
 	}
 	catch (std::exception &e)
 	{
@@ -52,6 +53,7 @@ int	main()
 	try
 	{
 		b[-1] = 10;
+		std::cout << b[-1] << std::endl;
 	}
 	catch (std::exception &e)
 	{
