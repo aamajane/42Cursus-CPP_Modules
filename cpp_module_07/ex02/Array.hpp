@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 01:31:03 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 18:31:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/13 18:34:44 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ class Array
 		T	&operator[](unsigned int i)
 		{
 			if (i >= len)
-				throw std::out_of_range("Index is out of range");
+				throw std::exception();
 			return array[i];
 		}
 

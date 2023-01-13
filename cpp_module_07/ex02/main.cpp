@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 01:31:05 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 02:39:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/13 18:36:04 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main()
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << "Index is out of range" << std::endl;
 	}
 
 	try
@@ -57,7 +57,7 @@ int	main()
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << "Index is out of range" << std::endl;
 	}
 
 	// system("leaks program");
