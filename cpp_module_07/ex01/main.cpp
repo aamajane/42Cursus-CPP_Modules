@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 01:22:19 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 18:56:06 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/13 20:32:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	print(T const &i)
 int	main()
 {
 	std::cout << "========== TEST1 ==========" << std::endl;
-	int	array[] = {0, 1, 2, 3, 4};
+	int array[] = {0, 1, 2, 3, 4};
 	iter(array, 5, print);
 
 	std::cout << "========== TEST2 ==========" << std::endl;
