@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 18:48:18 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 19:31:42 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 #include <algorithm>
 #include <exception>
 
+class NotFoundException : public std::exception
+{
+	public:
+		virtual const char *what() const throw()
+		{
+			return "Element not found";
+		}
+};
+
 template <typename T>
 int	easyFind(T const &ToSearch, int ToFind)
 {
@@ -23,7 +32,7 @@ int	easyFind(T const &ToSearch, int ToFind)
 
 	it = std::find(ToSearch.begin(), ToSearch.end(), ToFind);
 	if (it == ToSearch.end())
-		throw std::exception();
+		throw NotFoundException();
 	return *it;
 }
 
