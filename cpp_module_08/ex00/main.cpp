@@ -6,13 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:52 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 19:45:42 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 19:46:22 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
-#include <vector>
 #include <iostream>
+#include <vector>
 
 int	main()
 {
