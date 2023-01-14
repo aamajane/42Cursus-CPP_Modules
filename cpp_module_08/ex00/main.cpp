@@ -6,7 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:52 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 22:46:53 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:23:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "easyfind.hpp"
+
+int	main()
+{
+	return 0;
+}
