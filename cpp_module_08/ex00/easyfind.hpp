@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 18:30:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:37:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 #define EASYFIND_HPP
 
 #include <algorithm>
+#include <exception>
 
 template <typename T>
-bool	easyFind(T &container, int n)
+int	easyFind(T const &container, int n)
 {
-	typename T::iterator	begin = container.begin();
-	typename T::iterator	end = container.end();
-	typename T::iterator	it = std::find(begin, end, n);
+	typename T::const_iterator	it;
 
-	if (it == end)
-		return (false);
-	return (true);
+	it = std::find(container.begin(), container.end(), n);
+	if (it == container.end())
+		throw std::exception();
+	return *it;
 }
 
 #endif
