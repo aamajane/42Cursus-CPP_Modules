@@ -6,9 +6,12 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 01:31:03 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 18:39:53 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:30:16 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ARRAY_HPP
+#define ARRAY_HPP
 
 #include <iostream>
 
@@ -64,3 +67,5 @@ class Array
 			return len;
 		}
 };
+
+#endif

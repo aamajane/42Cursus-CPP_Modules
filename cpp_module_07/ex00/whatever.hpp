@@ -6,9 +6,12 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 01:11:38 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/13 01:20:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:29:43 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
 
 #include <iostream>
 
@@ -31,3 +34,5 @@ T const	&max(T const &a, T const &b)
 {
 	return (a > b ? a : b);
 }
+
+#endif
