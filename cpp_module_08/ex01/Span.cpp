@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:22:19 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 22:59:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:38:53 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Span &Span::operator=(Span const &rhs)
 	array = new int[n];
 	for (unsigned int i = 0; i < size; i++)
 		array[i] = rhs.array[i];
-	return (*this);
+	return *this;
 }
 
 Span::~Span()
