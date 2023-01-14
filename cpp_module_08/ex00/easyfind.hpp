@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 18:37:20 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:48:18 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 #include <exception>
 
 template <typename T>
-int	easyFind(T const &container, int n)
+int	easyFind(T const &ToSearch, int ToFind)
 {
-	typename T::const_iterator	it;
+	typename T::const_iterator it;
 
-	it = std::find(container.begin(), container.end(), n);
-	if (it == container.end())
+	it = std::find(ToSearch.begin(), ToSearch.end(), ToFind);
+	if (it == ToSearch.end())
 		throw std::exception();
 	return *it;
 }
