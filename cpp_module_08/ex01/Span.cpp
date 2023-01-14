@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:22:19 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 22:51:41 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 22:59:31 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,14 @@ int	Span::longestSpan()
 	std::sort(array, array + size);
 	int	max = array[size - 1] - array[0];
 	return max;
+}
+
+const char *Span::SpanFullException::what() const throw()
+{
+	return ("Span is full");
+}
+
+const char *Span::SpanEmptyException::what() const throw()
+{
+	return ("Span is empty");
 }

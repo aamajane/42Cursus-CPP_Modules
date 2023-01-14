@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:22:22 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 22:51:36 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 22:59:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,13 @@ class Span
 		class SpanFullException : public std::exception
 		{
 			public:
-				const char *what() const throw()
-				{
-					return ("Span is full");
-				}
+				const char *what() const throw();
 		};
 
 		class SpanEmptyException : public std::exception
 		{
 			public:
-				const char *what() const throw()
-				{
-					return ("Span is empty");
-				}
+				const char *what() const throw();
 		};
 };
 
