@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:52 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 20:15:56 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:24:50 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ int	main()
 {
 	std::vector<int>	v;
 
-	v.push_back(0);
-	v.push_back(2);
-	v.push_back(4);
-	v.push_back(6);
-	v.push_back(8);
+	for (int i = 1; i <= 5; i++)
+		v.push_back(i);
 
 	try
 	{
 		std::cout << easyFind(v, 4) << std::endl;
-		std::cout << easyFind(v, 5) << std::endl;
 		std::cout << easyFind(v, 6) << std::endl;
 	}
 	catch (std::exception &e)
