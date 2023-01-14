@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:22:22 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 22:59:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:58:12 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 class Span
 {
 	private:
-		unsigned int	n;
-		unsigned int	size;
-		int				*array;
+		std::vector<int>	vec;
+		unsigned int		n;
 
 	public:
 		Span();
@@ -31,6 +31,7 @@ class Span
 		~Span();
 
 		void	addNumber(int nb);
+		void	addMultiNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 		int		shortestSpan();
 		int		longestSpan();
 
