@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:52 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 20:29:20 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:30:31 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main()
 	std::cout << "===== TEST2 =====" << std::endl;
 	std::list<int>	l;
 
-	for (int i = 5; i <= 10; i++)
+	for (int i = 5; i <= 9; i++)
 		l.push_back(i);
 
 	try
