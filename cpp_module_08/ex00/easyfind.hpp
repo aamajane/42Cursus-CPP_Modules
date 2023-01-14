@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 19:31:42 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:08:44 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class NotFoundException : public std::exception
 {
 	public:
-		virtual const char *what() const throw()
+		const char	*what() const throw()
 		{
 			return "Element not found";
 		}
