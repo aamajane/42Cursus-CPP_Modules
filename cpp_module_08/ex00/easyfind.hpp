@@ -6,9 +6,12 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:55 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 18:27:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:30:31 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
 #include <algorithm>
 
@@ -23,3 +26,5 @@ bool	easyFind(T &container, int n)
 		return (false);
 	return (true);
 }
+
+#endif
