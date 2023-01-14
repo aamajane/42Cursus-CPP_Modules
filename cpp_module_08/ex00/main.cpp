@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:46:52 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/14 20:30:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/14 20:34:41 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	main()
 
 	try
 	{
-		std::cout << easyFind(v, 4) << std::endl;
-		std::cout << easyFind(v, 6) << std::endl;
+		std::cout << easyFind(v, 2) << std::endl;
+		std::cout << easyFind(v, 8) << std::endl;
 	}
 	catch (std::exception &e)
 	{
@@ -42,7 +42,7 @@ int	main()
 	try
 	{
 		std::cout << easyFind(l, 6) << std::endl;
-		std::cout << easyFind(l, 4) << std::endl;
+		std::cout << easyFind(l, 0) << std::endl;
 	}
 	catch (std::exception &e)
 	{
