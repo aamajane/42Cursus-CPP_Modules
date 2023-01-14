@@ -6,13 +6,14 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 19:58:22 by aamajane          #+#    #+#              #
-#    Updated: 2023/01/12 01:15:37 by aamajane         ###   ########.fr        #
+#    Updated: 2023/01/14 22:22:11 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	program
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp \
+			Span.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
