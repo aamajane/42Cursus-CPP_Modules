@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 20:13:50 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/15 20:25:07 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/15 20:29:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class MutantStack : public std::stack<T>
 	public:
 		MutantStack() : std::stack<T>() {}
 		MutantStack(MutantStack const &src) : std::stack<T>(src) {}
-		virtual ~MutantStack() {}
+		~MutantStack() {}
 
 		MutantStack &operator=(MutantStack const &rhs)
 		{
