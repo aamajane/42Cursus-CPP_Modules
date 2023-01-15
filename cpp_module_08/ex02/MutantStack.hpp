@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 20:13:50 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/15 20:31:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/15 20:41:05 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ template <typename T>
 class MutantStack : public std::stack<T>
 {
 	public:
-		MutantStack() : std::stack<T>() {}
-		MutantStack(MutantStack const &src) : std::stack<T>(src) {}
+		MutantStack() {}
+		MutantStack(MutantStack const &copy) { *this = copy; }
 		~MutantStack() {}
 
 		MutantStack &operator=(MutantStack const &rhs)
