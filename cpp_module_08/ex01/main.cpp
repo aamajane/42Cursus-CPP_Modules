@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:22:17 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/15 20:08:28 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/15 20:11:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int main()
 
 	// 	std::cout << sp.shortestSpan() << std::endl;
 	// 	std::cout << sp.longestSpan() << std::endl;
-
 	// }
 	// catch (std::exception &e)
 	// {
