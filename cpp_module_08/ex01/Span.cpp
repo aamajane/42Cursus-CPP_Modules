@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:22:19 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/15 00:02:55 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/15 15:05:50 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Span &Span::operator=(Span const &rhs)
 {
 	vec = rhs.vec;
 	n = rhs.n;
-	return (*this);
+	return *this;
 }
 
 Span::~Span() {}
@@ -56,7 +56,7 @@ int		Span::shortestSpan()
 		if (tmp[i] - tmp[i - 1] < min)
 			min = tmp[i] - tmp[i - 1];
 	}
-	return (min);
+	return min;
 }
 
 int		Span::longestSpan()
@@ -66,7 +66,7 @@ int		Span::longestSpan()
 	std::vector<int>	tmp = vec;
 	std::sort(tmp.begin(), tmp.end());
 	int	max = tmp[tmp.size() - 1] - tmp[0];
-	return (max);
+	return max;
 }
 
 const char *Span::SpanFullException::what() const throw()
