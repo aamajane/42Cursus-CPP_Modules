@@ -6,16 +6,14 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 20:13:50 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/15 20:54:26 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:55:21 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MUTANTSTACK_HPP
 #define MUTANTSTACK_HPP
 
-#include <iostream>
 #include <stack>
-#include <list>
 
 template <typename T>
 class MutantStack : public std::stack<T>

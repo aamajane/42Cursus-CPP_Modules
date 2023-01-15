@@ -6,11 +6,13 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 20:13:51 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/15 21:41:04 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/15 22:55:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
+#include <iostream>
+#include <list>
 
 int	main()
 {
