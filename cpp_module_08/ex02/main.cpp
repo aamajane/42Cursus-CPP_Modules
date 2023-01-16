@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 20:13:51 by aamajane          #+#    #+#             */
-/*   Updated: 2023/01/16 02:25:58 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/01/16 19:46:18 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,35 +47,40 @@ int	main()
 	std::stack<int>	s(mstack);
 
 
-	// std::list<int>	mlist;
+	// MutantStack<int>	mystack;
 
-	// mlist.push_back(5);
-	// mlist.push_back(17);
+	// srand(time(NULL));
+	// for (int i = 0; i < 10; i++)
+	// 	mystack.push(rand() % 100);
 
-	// std::cout << mlist.back() << std::endl;
+	// std::cout << "mystack size : " << mystack.size() << std::endl;
 
-	// mlist.pop_back();
+	// MutantStack<int>::iterator	it = mystack.begin();
+	// MutantStack<int>::iterator	ite = mystack.end();
 
-	// std::cout << mlist.size() << std::endl;
-
-	// mlist.push_back(3);
-	// mlist.push_back(5);
-	// mlist.push_back(737);
-	// mlist.push_back(0);
-
-	// std::list<int>::iterator	it = mlist.begin();
-	// std::list<int>::iterator	ite = mlist.end();
-
-	// ++it;
-	// --it;
-
+	// std::cout << "mystack elements : ";
 	// while (it != ite)
 	// {
-	// 	std::cout << *it << std::endl;
-	// 	++it;
+	// 	std::cout << *it << " ";
+	// 	it++;
 	// }
+	// std::cout << std::endl;
 
-	// std::list<int>	s(mlist);
+	// for (int i = 0; i < 5; i++)
+	// 	mystack.pop();
+
+	// std::cout << "mystack size : " << mystack.size() << std::endl;
+
+	// MutantStack<int>::reverse_iterator	rit = mystack.rbegin();
+	// MutantStack<int>::reverse_iterator	rite = mystack.rend();
+
+	// std::cout << "mystack elements : ";
+	// while (rit != rite)
+	// {
+	// 	std::cout << *rit << " ";
+	// 	rit++;
+	// }
+	// std::cout << std::endl;
 
 	return 0;
 }
