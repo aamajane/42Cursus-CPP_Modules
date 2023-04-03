@@ -6,14 +6,14 @@
 #    By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/30 12:59:35 by aamajane          #+#    #+#              #
-#    Updated: 2023/04/03 00:04:11 by aamajane         ###   ########.fr        #
+#    Updated: 2023/04/03 00:06:35 by aamajane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	btc
 
 SRCS	=	main.cpp \
-			 BitcoinExchange.cpp
+			BitcoinExchange.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
