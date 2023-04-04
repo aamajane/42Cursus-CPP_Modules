@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:33 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/04 00:30:50 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/04 00:35:52 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	main(int ac, char **av)
 {
 	if (ac == 2)
 	{
-		BitcoinExchange exchange;
+		BitcoinExchange btc;
 		try
 		{
-			exchange.readDatabase();
-			exchange.readInputFile(av[1]);
+			btc.readDatabase();
+			btc.readInputFile(av[1]);
 		}
 		catch(const std::exception &e)
 		{
