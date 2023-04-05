@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/05 02:16:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/05 20:57:36 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,23 @@ void	BitcoinExchange::readInputFile(std::string fileName)
 		{
 			std::string	date = line.substr(0, line.find('|'));
 			float		count = std::stof(line.substr(line.find('|') + 1));
-			if (isDateValid(date) && isCountValid(count))
+			try
 			{
-				
+				isDateValid(date);
+				isCountValid(count);
 			}
+			catch(const std::exception &e)
+			{
+				std::cout << e.what() << std::endl;
+			}
+			
 		}
 	}
 
 	file.close();
 }
 
-bool	BitcoinExchange::isDateValid(std::string date)
+void	BitcoinExchange::isDateValid(std::string date)
 {
 	int	count = 0;
 
@@ -81,43 +87,24 @@ bool	BitcoinExchange::isDateValid(std::string date)
 		if (date[i] == '-')
 			count++;
 		else if (!isdigit(date[i]))
-		{
-			std::cout << "Error: invalid date" << std::endl;
-			return false;
-		}
+			throw std::runtime_error("Error: invalid date");
 	}
 
 	if (count != 2)
-	{
-		std::cout << "Error: invalid date" << std::endl;
-		return false;
-	}
+		throw std::runtime_error("Error: invalid date");
 
 	int	year = std::stoi(date.substr(0, date.find('-')));
 	int	month = std::stoi(date.substr(date.find('-') + 1, date.rfind('-')));
 	int	day = std::stoi(date.substr(date.rfind('-') + 1));
 
 	if (year < 2009 || month < 1 || month > 12 || day < 1 || day > 31)
-	{
-		std::cout << "Error: invalid date" << std::endl;
-		return false;
-	}
-
-	return true;
+		throw std::runtime_error("Error: invalid date");
 }
 
-bool	BitcoinExchange::isCountValid(float count)
+void	BitcoinExchange::isCountValid(float count)
 {
 	if (count < 0)
-	{
-		std::cout << "Error: not a positive number" << std::endl;
-		return false;
-	}
+		throw std::runtime_error("Error: not a positive number");
 	else if (count > 1000)
-	{
-		std::cout << "Error: too large number" << std::endl;
-		return false;
-	}
-
-	return true;
+		throw std::runtime_error("Error: too large number");
 }
