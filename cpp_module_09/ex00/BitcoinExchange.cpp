@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/05 20:57:36 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/05 21:03:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,17 +80,11 @@ void	BitcoinExchange::readInputFile(std::string fileName)
 
 void	BitcoinExchange::isDateValid(std::string date)
 {
-	int	count = 0;
-
 	for (int i = 0; i < date.length(); i++)
-	{
-		if (date[i] == '-')
-			count++;
-		else if (!isdigit(date[i]))
+		if (!isdigit(date[i]) && date[i] != '-')
 			throw std::runtime_error("Error: invalid date");
-	}
 
-	if (count != 2)
+	if (std::count(date.begin(), date.end(), '-') != 2)
 		throw std::runtime_error("Error: invalid date");
 
 	int	year = std::stoi(date.substr(0, date.find('-')));
