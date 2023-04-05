@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/05 21:03:26 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/05 21:15:38 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	BitcoinExchange::readDatabase(std::string fileName)
 	{
 		std::string	date = line.substr(0, line.find(','));
 		float		price = std::stof(line.substr(line.find(',') + 1));
+
 		this->_database[date] = price;
 	}
 
@@ -56,22 +57,23 @@ void	BitcoinExchange::readInputFile(std::string fileName)
 	while (std::getline(file, line))
 	{
 		line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
+
 		if (std::count(line.begin(), line.end(), '|') != 1)
 			std::cout << "Error: invalid format" << std::endl;
 		else
 		{
 			std::string	date = line.substr(0, line.find('|'));
-			float		count = std::stof(line.substr(line.find('|') + 1));
+			float		value = std::stof(line.substr(line.find('|') + 1));
+
 			try
 			{
 				isDateValid(date);
-				isCountValid(count);
+				isValueValid(value);
 			}
 			catch(const std::exception &e)
 			{
 				std::cout << e.what() << std::endl;
 			}
-			
 		}
 	}
 
@@ -95,10 +97,8 @@ void	BitcoinExchange::isDateValid(std::string date)
 		throw std::runtime_error("Error: invalid date");
 }
 
-void	BitcoinExchange::isCountValid(float count)
+void	BitcoinExchange::isValueValid(float value)
 {
-	if (count < 0)
-		throw std::runtime_error("Error: not a positive number");
-	else if (count > 1000)
-		throw std::runtime_error("Error: too large number");
+	if (value < 0 || value > 1000)
+		throw std::runtime_error("Error: invalid value");
 }
