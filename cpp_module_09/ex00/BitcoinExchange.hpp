@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:31 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 00:37:53 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 01:23:42 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class BitcoinExchange
 		void	processInputFile(std::string fileName);
 		void	isDateValid(std::string date);
 		void	isValueValid(float value);
+		void	getResult(std::string date, float value);
 };
 
 #endif

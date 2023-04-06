@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 01:21:18 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 01:24:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,7 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 			{
 				isDateValid(date);
 				isValueValid(value);
-
-				std::map<std::string, float>::iterator	itlow;
-				itlow = this->_database.lower_bound(date);
-
-				if (date != itlow->first)
-					itlow--;
-
-				std::cout << date << " => " << value << " = ";
-				std::cout << value * itlow->second << std::endl;
+				getResult(date, value);
 			}
 			catch(const std::exception &e)
 			{
@@ -110,4 +102,16 @@ void	BitcoinExchange::isValueValid(float value)
 {
 	if (value < 0 || value > 1000)
 		throw std::runtime_error("Error: invalid value");
+}
+
+void	BitcoinExchange::getResult(std::string date, float value)
+{
+	std::map<std::string, float>::iterator	itlow;
+	itlow = this->_database.lower_bound(date);
+
+	if (date != itlow->first)
+		itlow--;
+
+	std::cout << date << " => " << value << " = ";
+	std::cout << value * itlow->second << std::endl;
 }
