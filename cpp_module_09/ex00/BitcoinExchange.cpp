@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 00:38:05 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 00:38:50 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 
 void	BitcoinExchange::isDateValid(std::string date)
 {
-	for (int i = 0; i < date.length(); i++)
+	for (size_t i = 0; i < date.length(); i++)
 		if (!isdigit(date[i]) && date[i] != '-')
 			throw std::runtime_error("Error: invalid date");
 
