@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/05 21:15:38 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 00:38:05 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	BitcoinExchange::readDatabase(std::string fileName)
 	file.close();
 }
 
-void	BitcoinExchange::readInputFile(std::string fileName)
+void	BitcoinExchange::processInputFile(std::string fileName)
 {
 	std::ifstream	file(fileName);
 	std::string		line;
