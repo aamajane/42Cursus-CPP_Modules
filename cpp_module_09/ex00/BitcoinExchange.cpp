@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 01:04:29 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 01:09:21 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,9 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 
 				std::map<std::string, float>::iterator	itlow;
 				itlow = this->_database.lower_bound(date);
+
+				if (date != itlow->first)
+					itlow--;
 
 				std::cout << date << " => " << value << " = ";
 				std::cout << value * itlow->second << std::endl;
