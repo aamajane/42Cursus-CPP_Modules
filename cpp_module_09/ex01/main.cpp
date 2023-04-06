@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:44 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 22:49:06 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:21:37 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int ac, char **av)
 		{
 			rpn.calculate(av[1]);
 		}
-		catch (const std::exception &e)
+		catch (std::exception const &e)
 		{
 			std::cout << e.what() << std::endl;
 		}

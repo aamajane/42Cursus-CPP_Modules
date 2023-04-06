@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:33 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 00:37:57 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:21:45 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 			btc.readDatabase("data.csv");
 			btc.processInputFile(av[1]);
 		}
-		catch(const std::exception &e)
+		catch(std::exception const &e)
 		{
 			std::cout << e.what() << std::endl;
 		}
