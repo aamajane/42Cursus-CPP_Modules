@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 20:45:26 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 20:58:20 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ void	RPN::isExpressionValid(std::string const &str)
 {
 	_exp = str;
 	_exp.erase(std::remove(_exp.begin(), _exp.end(), ' '), _exp.end());
-
-	if (_exp.length() < 3 || !isdigit(_exp[0]) || !isdigit(_exp[1]))
-		throw std::runtime_error("Error");
 
 	int	digitCount = 0;
 	int	operatorCount = 0;
