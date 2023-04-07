@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 01:38:29 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 01:48:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,27 @@ void	RPN::processExpression(std::string const &str)
 		else if (isOperator(str[i]))
 			this->_operators.push(str[i]);
 	}
+	if (this->_numbers.empty() || this->_operators.empty() ||
+		this->_numbers.size() != this->_operators.size() + 1)
+		throw std::runtime_error("Error");
 }
 
 void	RPN::calculate(void)
 {
-	
+	float	result = this->_numbers.top();
+	this->_numbers.pop();
+	while (!this->_numbers.empty())
+	{
+		if (this->_operators.top() == '+')
+			result += this->_numbers.top();
+		else if (this->_operators.top() == '-')
+			result -= this->_numbers.top();
+		else if (this->_operators.top() == '*')
+			result *= this->_numbers.top();
+		else if (this->_operators.top() == '/')
+			result /= this->_numbers.top();
+		this->_numbers.pop();
+		this->_operators.pop();
+	}
+	std::cout << result << std::endl;
 }
