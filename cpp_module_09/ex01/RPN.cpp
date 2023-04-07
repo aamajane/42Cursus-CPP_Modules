@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 01:48:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 20:45:26 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ RPN::RPN(RPN const &copy)
 
 RPN &RPN::operator=(RPN const &rhs)
 {
-	this->_numbers = rhs._numbers;
-	this->_operators = rhs._operators;
+	this->_stack = rhs._stack;
 	return *this;
 }
 
@@ -35,41 +34,55 @@ bool	RPN::isOperator(char c)
 
 void	RPN::isExpressionValid(std::string const &str)
 {
-	for (size_t i = 0; i < str.length(); i++)
-		if (str[i] != ' ' && !isdigit(str[i]) && !isOperator(str[i]))
-			throw std::runtime_error("Error");
-}
+	_exp = str;
+	_exp.erase(std::remove(_exp.begin(), _exp.end(), ' '), _exp.end());
 
-void	RPN::processExpression(std::string const &str)
-{
-	for (int i = str.length() - 1; i >= 0; i--)
+	if (_exp.length() < 3 || !isdigit(_exp[0]) || !isdigit(_exp[1]))
+		throw std::runtime_error("Error");
+
+	int	digitCount = 0;
+	int	operatorCount = 0;
+
+	for (size_t i = 0; i < _exp.length(); i++)
 	{
-		if (isdigit(str[i]))
-			this->_numbers.push(str[i] - '0');
-		else if (isOperator(str[i]))
-			this->_operators.push(str[i]);
+		if (isdigit(_exp[i]))
+			digitCount++;
+		else if (isOperator(_exp[i]))
+			operatorCount++;
+		else
+			throw std::runtime_error("Error");
 	}
-	if (this->_numbers.empty() || this->_operators.empty() ||
-		this->_numbers.size() != this->_operators.size() + 1)
+
+	if (digitCount - operatorCount != 1)
 		throw std::runtime_error("Error");
 }
 
-void	RPN::calculate(void)
+void	RPN::calculate()
 {
-	float	result = this->_numbers.top();
-	this->_numbers.pop();
-	while (!this->_numbers.empty())
+	for (size_t i = 0; i < _exp.length(); i++)
 	{
-		if (this->_operators.top() == '+')
-			result += this->_numbers.top();
-		else if (this->_operators.top() == '-')
-			result -= this->_numbers.top();
-		else if (this->_operators.top() == '*')
-			result *= this->_numbers.top();
-		else if (this->_operators.top() == '/')
-			result /= this->_numbers.top();
-		this->_numbers.pop();
-		this->_operators.pop();
+		if (isdigit(_exp[i]))
+			_stack.push(_exp[i] - '0');
+		else if (isOperator(_exp[i]))
+		{
+			if (_stack.size() < 2)
+				throw std::runtime_error("Error");
+
+			float	lhs = _stack.top();
+			_stack.pop();
+			float	rhs = _stack.top();
+			_stack.pop();
+
+			if (_exp[i] == '+')
+				_stack.push(rhs + lhs);
+			else if (_exp[i] == '-')
+				_stack.push(rhs - lhs);
+			else if (_exp[i] == '*')
+				_stack.push(rhs * lhs);
+			else if (_exp[i] == '/')
+				_stack.push(rhs / lhs);
+		}
 	}
-	std::cout << result << std::endl;
+
+	std::cout << _stack.top() << std::endl;
 }
