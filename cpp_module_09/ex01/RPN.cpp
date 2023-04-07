@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 20:58:20 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:00:43 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,21 @@ void	RPN::calculate()
 			float	rhs = _stack.top();
 			_stack.pop();
 
-			if (_exp[i] == '+')
-				_stack.push(rhs + lhs);
-			else if (_exp[i] == '-')
-				_stack.push(rhs - lhs);
-			else if (_exp[i] == '*')
-				_stack.push(rhs * lhs);
-			else if (_exp[i] == '/')
-				_stack.push(rhs / lhs);
+			switch (_exp[i])
+			{
+				case '+':
+					_stack.push(lhs + rhs);
+					break;
+				case '-':
+					_stack.push(lhs - rhs);
+					break;
+				case '*':
+					_stack.push(lhs * rhs);
+					break;
+				case '/':
+					_stack.push(lhs / rhs);
+					break;
+			}
 		}
 	}
 
