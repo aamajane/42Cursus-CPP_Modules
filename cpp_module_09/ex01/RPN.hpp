@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:50 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/06 22:48:30 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 00:17:16 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class RPN
 		RPN &operator=(RPN const &rhs);
 		~RPN();
 
+		void	isExpressionValid(std::string const &str);
 		void	calculate(std::string const &str);
 };
 
