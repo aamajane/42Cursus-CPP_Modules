@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 21:00:43 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:01:30 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ void	RPN::calculate()
 			if (_stack.size() < 2)
 				throw std::runtime_error("Error");
 
-			float	lhs = _stack.top();
-			_stack.pop();
 			float	rhs = _stack.top();
+			_stack.pop();
+			float	lhs = _stack.top();
 			_stack.pop();
 
 			switch (_exp[i])
