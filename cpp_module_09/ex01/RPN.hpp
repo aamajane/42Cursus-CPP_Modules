@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:50 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 22:26:31 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 22:27:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class RPN
 {
 	private:
-		std::string			_exp;
+		std::string		_exp;
 		std::stack<int>	_stack;
 
 	public:
