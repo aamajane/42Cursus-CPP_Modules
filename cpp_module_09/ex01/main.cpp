@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:44 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 20:09:34 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:08:59 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int ac, char **av)
 		try
 		{
 			rpn.isExpressionValid(av[1]);
-			rpn.calculate();
+			rpn.calculateRPN();
 		}
 		catch (std::exception const &e)
 		{

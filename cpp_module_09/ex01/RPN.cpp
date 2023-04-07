@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 21:07:32 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:08:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	RPN::isExpressionValid(std::string const &str)
 		throw std::runtime_error("Error");
 }
 
-void	RPN::calculate()
+void	RPN::calculateRPN()
 {
 	for (size_t i = 0; i < _exp.length(); i++)
 	{
