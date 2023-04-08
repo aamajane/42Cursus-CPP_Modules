@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 21:07:24 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:29:38 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,14 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 		else
 		{
 			std::string	date = line.substr(0, line.find('|'));
-			float		value = std::stof(line.substr(line.find('|') + 1));
+			std::string	valueStr = line.substr(line.find('|') + 1);
 
 			try
 			{
 				isDateValid(date);
-				isValueValid(value);
+				isValueValid(valueStr);
+
+				float	value = std::stof(valueStr);
 				getResult(date, value);
 			}
 			catch(std::exception const &e)
@@ -98,8 +100,17 @@ void	BitcoinExchange::isDateValid(std::string date)
 		throw std::runtime_error("Error: invalid date");
 }
 
-void	BitcoinExchange::isValueValid(float value)
+void	BitcoinExchange::isValueValid(std::string valueStr)
 {
+	for (size_t i = 0; i < valueStr.length(); i++)
+		if (!isdigit(valueStr[i]) && valueStr[i] != '.')
+			throw std::runtime_error("Error: invalid value");
+	
+	if (std::count(valueStr.begin(), valueStr.end(), '.') > 1)
+		throw std::runtime_error("Error: invalid value");
+
+	float	value = std::stof(valueStr);
+
 	if (value < 0 || value > 1000)
 		throw std::runtime_error("Error: invalid value");
 }
