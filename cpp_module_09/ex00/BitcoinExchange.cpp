@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/08 20:31:06 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:32:42 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ void	BitcoinExchange::getResult(std::string date, float value)
 	std::map<std::string, float>::iterator	itlow;
 	itlow = this->_database.lower_bound(date);
 
-	if (date != itlow->first)
+	if (itlow->first != date)
 		itlow--;
 
 	std::cout << date << " => " << value << " = ";
