@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/08 20:29:38 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/08 20:31:06 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,12 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 		{
 			std::string	date = line.substr(0, line.find('|'));
 			std::string	valueStr = line.substr(line.find('|') + 1);
+			float		value = std::stof(valueStr);
 
 			try
 			{
 				isDateValid(date);
 				isValueValid(valueStr);
-
-				float	value = std::stof(valueStr);
 				getResult(date, value);
 			}
 			catch(std::exception const &e)
