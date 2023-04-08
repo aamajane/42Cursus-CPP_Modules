@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/08 21:11:38 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/08 21:13:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	BitcoinExchange::isValueValid(std::string valueStr, float value)
 	for (size_t i = 0; i < valueStr.length(); i++)
 		if (!isdigit(valueStr[i]) && valueStr[i] != '.')
 			throw std::runtime_error("Error: invalid value");
-	
+
 	if (std::count(valueStr.begin(), valueStr.end(), '.') > 1)
 		throw std::runtime_error("Error: invalid value");
 
