@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/08 20:32:42 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/08 21:11:38 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 			try
 			{
 				isDateValid(date);
-				isValueValid(valueStr);
+				isValueValid(valueStr, value);
 				getResult(date, value);
 			}
 			catch(std::exception const &e)
@@ -99,7 +99,7 @@ void	BitcoinExchange::isDateValid(std::string date)
 		throw std::runtime_error("Error: invalid date");
 }
 
-void	BitcoinExchange::isValueValid(std::string valueStr)
+void	BitcoinExchange::isValueValid(std::string valueStr, float value)
 {
 	for (size_t i = 0; i < valueStr.length(); i++)
 		if (!isdigit(valueStr[i]) && valueStr[i] != '.')
@@ -107,8 +107,6 @@ void	BitcoinExchange::isValueValid(std::string valueStr)
 	
 	if (std::count(valueStr.begin(), valueStr.end(), '.') > 1)
 		throw std::runtime_error("Error: invalid value");
-
-	float	value = std::stof(valueStr);
 
 	if (value < 0 || value > 1000)
 		throw std::runtime_error("Error: invalid value");
