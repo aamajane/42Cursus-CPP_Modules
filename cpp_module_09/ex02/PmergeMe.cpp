@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/10 01:24:44 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/10 01:26:39 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,12 @@ void	PmergeMe::isSequenceValid(std::string const &str)
 		if (isdigit(str[i]))
 		{
 			std::string	tmp = "";
-
 			while (isdigit(str[i]))
 				tmp += str[i++];
-
 			if (tmp.length() > 10)
 				throw std::runtime_error("Error: Invalid sequence");
 
 			int	nbr = std::stoi(tmp);
-
 			if (nbr < 0)
 				throw std::runtime_error("Error: Invalid sequence");
 
