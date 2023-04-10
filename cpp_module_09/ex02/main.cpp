@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/10 00:43:06 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/10 00:50:27 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int ac, char **av)
 	{
 		try
 		{
-			
+			PM.isSequenceValid(av[1]);
 		}
 		catch (std::exception const &e)
 		{
@@ -28,6 +28,6 @@ int	main(int ac, char **av)
 		}
 	}
 	else
-		std::cout << "Usage: ./PmergeMe \"positive integer sequence\"" << std::endl;
+		std::cout << "Usage: ./PmergeMe \"Positive integer sequence\"" << std::endl;
 	return 0;
 }

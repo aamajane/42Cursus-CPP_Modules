@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 13:00:00 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/10 00:32:44 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/10 00:44:30 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class PmergeMe
 		PmergeMe(PmergeMe const &copy);
 		PmergeMe &operator=(PmergeMe const &rhs);
 		~PmergeMe();
+
+		void	isSequenceValid(std::string const &str);
 };
 
 #endif
