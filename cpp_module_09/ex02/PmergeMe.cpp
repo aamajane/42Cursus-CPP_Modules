@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/11 21:25:36 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/11 21:29:57 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ void	PmergeMe::isSequenceValid(std::string const &str)
 	if (this->_vec.size() < 2)
 		throw std::runtime_error("Error: Invalid sequence");
 	
-	if (is_sorted(this->_vec.begin(), this->_vec.end()))
+	if (std::is_sorted(this->_vec.begin(), this->_vec.end()))
 		throw std::runtime_error("Error: Sequence already sorted");
 }
