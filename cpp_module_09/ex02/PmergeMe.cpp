@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 22:19:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:44:18 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,28 +28,20 @@ PmergeMe &PmergeMe::operator=(PmergeMe const &rhs)
 
 PmergeMe::~PmergeMe() {}
 
-void	PmergeMe::isSequenceValid(std::string const &str)
+void	PmergeMe::isSequenceValid(size_t ac, char **av)
 {
-	for (size_t i = 0; i < str.length(); i++)
-		if (!isdigit(str[i]) && str[i] != ' ')
-			throw std::runtime_error("Error: Invalid sequence");
-
-	for (size_t i = 0; i < str.length(); i++)
+	for (size_t i = 1; i < ac; i++)
 	{
-		while (str[i] == ' ')
-			i++;
+		std::string	str = av[i];
 
-		if (isdigit(str[i]))
-		{
-			std::string	tmp = "";
-			while (isdigit(str[i]))
-				tmp += str[i++];
+		for (size_t j = 0; j < str.length(); j++)
+			if (!std::isdigit(str[j]))
+				throw std::runtime_error("Error: Invalid sequence");
 
-			int	nbr = std::stoi(tmp);
+		int	nbr = std::stoi(str);
 
-			this->_vec.push_back(nbr);
-			this->_lst.push_back(nbr);
-		}
+		this->_vec.push_back(nbr);
+		this->_lst.push_back(nbr);
 	}
 
 	if (this->_vec.size() < 2)
@@ -58,11 +50,11 @@ void	PmergeMe::isSequenceValid(std::string const &str)
 	if (std::is_sorted(this->_vec.begin(), this->_vec.end()))
 		throw std::runtime_error("Error: Sequence already sorted");
 
-	std::vector<int>	tmp = this->_vec;
-	std::sort(tmp.begin(), tmp.end());
-	std::vector<int>::iterator	it = std::unique(tmp.begin(), tmp.end());
-	if (it != tmp.end())
-		throw std::runtime_error("Error: Sequence contains duplicates");
+	// std::vector<int>	tmp = this->_vec;
+	// std::sort(tmp.begin(), tmp.end());
+	// std::vector<int>::iterator	it = std::unique(tmp.begin(), tmp.end());
+	// if (it != tmp.end())
+	// 	throw std::runtime_error("Error: Sequence contains duplicates");
 }
 
 void	PmergeMe::sortSequence()
