@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/11 22:40:34 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:24:43 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ PmergeMe &PmergeMe::operator=(PmergeMe const &rhs)
 }
 
 PmergeMe::~PmergeMe() {}
+
+std::vector<int>	PmergeMe::getVec()
+{
+	return this->_vec;
+}
+
+std::list<int>	PmergeMe::getLst()
+{
+	return this->_lst;
+}
 
 void	PmergeMe::isSequenceValid(std::string const &str)
 {
@@ -63,4 +73,15 @@ void	PmergeMe::isSequenceValid(std::string const &str)
 	std::vector<int>::iterator	it = std::unique(tmp.begin(), tmp.end());
 	if (it != tmp.end())
 		throw std::runtime_error("Error: Sequence contains duplicates");
+}
+
+void	PmergeMe::printSequence()
+{
+	for (size_t i = 0; i < this->_vec.size(); i++)
+	{
+		std::cout << this->_vec[i];
+		if (i != this->_vec.size() - 1)
+			std::cout << " ";
+	}
+	std::cout << std::endl;
 }
