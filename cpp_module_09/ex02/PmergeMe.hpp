@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 13:00:00 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 21:24:49 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:28:00 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class PmergeMe
 
 		void	isSequenceValid(std::string const &str);
 		void	printSequence();
-	
+
 		template <typename T>
 		T	insertionSort(T &container)
 		{
