@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 13:00:00 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 22:11:39 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:18:00 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,8 @@ class PmergeMe
 		PmergeMe &operator=(PmergeMe const &rhs);
 		~PmergeMe();
 
-		std::vector<int>	getVec();
-		std::list<int>		getLst();
-
 		void	isSequenceValid(std::string const &str);
+		void	sortSequence();
 		void	printSequence();
 
 		template <typename T>

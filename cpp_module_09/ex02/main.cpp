@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 21:26:23 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:18:06 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,7 @@ int	main(int ac, char **av)
 		try
 		{
 			PM.isSequenceValid(av[1]);
-
-			std::cout << "Before: ";
-			PM.printSequence();
-
-			std::vector<int>	vec = PM.getVec();
-			std::list<int>		lst = PM.getLst();
-
-			PM.mergeInsertionSort(vec);
-			PM.mergeInsertionSort(lst);
-
-			std::cout << "After: ";
-			PM.printSequence();
+			PM.sortSequence();
 		}
 		catch (std::exception const &e)
 		{
