@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 13:00:00 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 21:28:00 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:11:39 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,8 @@ class PmergeMe
 				return insertionSort(container);
 
 			int	mid = container.size() / 2;
-			T	left(container.begin(), container.begin() + mid);
-			T	right(container.begin() + mid, container.end());
+			T	left(container.begin(), next(container.begin(), mid));
+			T	right(next(container.begin(), mid), container.end());
 
 			left = mergeInsertionSort(left);
 			right = mergeInsertionSort(right);
