@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 21:08:57 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:46:14 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	RPN::isExpressionValid(std::string const &str)
 
 	for (size_t i = 0; i < _exp.length(); i++)
 	{
-		if (isdigit(_exp[i]))
+		if (std::isdigit(_exp[i]))
 			digitCount++;
 		else if (isOperator(_exp[i]))
 			operatorCount++;
@@ -59,7 +59,7 @@ void	RPN::calculateRPN()
 {
 	for (size_t i = 0; i < _exp.length(); i++)
 	{
-		if (isdigit(_exp[i]))
+		if (std::isdigit(_exp[i]))
 			_stack.push(_exp[i] - '0');
 		else if (isOperator(_exp[i]))
 		{
