@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:44 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/07 21:08:59 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:51:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int	main(int ac, char **av)
 	else
 		std::cout << "Usage: ./RPN \"expression\"" << std::endl;
 
-	return (0);
+	return 0;
 }

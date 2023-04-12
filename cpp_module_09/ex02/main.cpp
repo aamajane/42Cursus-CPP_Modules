@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:53 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 22:42:28 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/12 22:51:32 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int	main(int ac, char **av)
 	}
 	else
 		std::cout << "Usage: ./PmergeMe [Positive integer sequence]" << std::endl;
+
 	return 0;
 }
