@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/13 01:47:09 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/13 02:08:11 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ void	PmergeMe::isSequenceValid(size_t ac, char **av)
 	{
 		std::string	str = av[i];
 
+		if (str.empty())
+			throw std::runtime_error("Error: Invalid sequence");
+
 		for (size_t j = 0; j < str.length(); j++)
 			if (!std::isdigit(str[j]))
 				throw std::runtime_error("Error: Invalid sequence");
@@ -44,9 +47,6 @@ void	PmergeMe::isSequenceValid(size_t ac, char **av)
 		this->_lst.push_back(nbr);
 	}
 
-	if (this->_vec.size() < 2)
-		throw std::runtime_error("Error: Invalid sequence");
-	
 	if (std::is_sorted(this->_vec.begin(), this->_vec.end()))
 		throw std::runtime_error("Error: Sequence already sorted");
 }
