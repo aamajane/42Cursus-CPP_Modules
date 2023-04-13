@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/13 19:53:40 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/13 23:36:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,19 @@ void	PmergeMe::sortSequence()
 	std::cout << "Before: ";
 	printSequence();
 
+	clock_t vecStart = clock();
 	this->_vec = mergeInsertionSort(this->_vec);
+	clock_t vecEnd = clock();
+
+	clock_t lstStart = clock();
 	this->_lst = mergeInsertionSort(this->_lst);
+	clock_t lstEnd = clock();
 
 	std::cout << "After: ";
 	printSequence();
+
+	printTime(vecStart, vecEnd, "vector");
+	printTime(lstStart, lstEnd, "list");
 }
 
 void	PmergeMe::printSequence()
@@ -71,5 +79,16 @@ void	PmergeMe::printSequence()
 		if (i != this->_vec.size() - 1)
 			std::cout << " ";
 	}
+	std::cout << std::endl;
+}
+
+void	PmergeMe::printTime(clock_t start, clock_t end, std::string type)
+{
+	std::cout << "Time to process a range of ";
+	if (type == "vector")
+		std::cout << this->_vec.size() << " elements with std::vector : ";
+	else
+		std::cout << this->_lst.size() << " elements with std::list   : ";
+	std::cout << static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000000 << " us";
 	std::cout << std::endl;
 }
