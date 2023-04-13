@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 22:45:59 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/13 19:59:56 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 
 	while (std::getline(file, line))
 	{
+		if (std::count(line.begin(), line.end(), ' ') != 2)
+			std::cout << "Error: invalid format" << std::endl;
+
 		line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
 
 		if (std::count(line.begin(), line.end(), '|') != 1)
