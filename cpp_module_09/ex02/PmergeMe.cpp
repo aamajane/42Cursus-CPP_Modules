@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/13 02:08:11 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/13 19:53:40 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ void	PmergeMe::sortSequence()
 	std::cout << "Before: ";
 	printSequence();
 
-	mergeInsertionSort(this->_vec);
-	mergeInsertionSort(this->_lst);
+	this->_vec = mergeInsertionSort(this->_vec);
+	this->_lst = mergeInsertionSort(this->_lst);
 
 	std::cout << "After: ";
 	printSequence();
