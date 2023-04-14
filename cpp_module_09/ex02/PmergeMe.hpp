@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 13:00:00 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/14 00:58:15 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/14 19:50:55 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ class PmergeMe
 		template <typename T>
 		T	mergeInsertionSort(T &container)
 		{
-			if (container.size() <= 30)
+			if (container.size() <= 16)
 				return insertionSort(container);
 
 			int	mid = container.size() / 2;
