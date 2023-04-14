@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/14 20:28:28 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/14 21:09:48 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	BitcoinExchange::readDatabase(std::string fileName)
 	if (!file.is_open())
 		throw std::runtime_error("Error: could not open" + fileName);
 
+	std::getline(file, line);
 	while (std::getline(file, line))
 	{
 		std::string	date = line.substr(0, line.find(','));
@@ -58,6 +59,9 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 	{
 		try
 		{
+			if (line.empty())
+				throw std::runtime_error("Error: empty line");
+
 			if (std::count(line.begin(), line.end(), ' ') != 2 || 
 				std::count(line.begin(), line.end(), '|') != 1)
 				throw std::runtime_error("Error: invalid format");
@@ -92,7 +96,8 @@ void	BitcoinExchange::isDateValid(std::string date)
 	int	month = std::stoi(date.substr(date.find('-') + 1, date.rfind('-')));
 	int	day = std::stoi(date.substr(date.rfind('-') + 1));
 
-	if (year < 2009 || month < 1 || month > 12 || day < 1 || day > 31)
+	if (date < "2009-01-02" || year < 2009 || 
+		month < 1 || month > 12 || day < 1 || day > 31)
 		throw std::runtime_error("Error: invalid date");
 }
 
