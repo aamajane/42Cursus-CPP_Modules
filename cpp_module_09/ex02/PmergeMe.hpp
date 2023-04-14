@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 13:00:00 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/13 23:31:35 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/14 00:44:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class PmergeMe
 		void	isSequenceValid(size_t ac, char **av);
 		void	sortSequence();
 		void	printSequence();
-		void	printTime(clock_t start, clock_t end, std::string type);
+		void	printTime(clock_t elapsedTime, std::string type);
 
 		template <typename T>
 		T	insertionSort(T &container)
