@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/13 19:59:56 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/14 20:24:01 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,26 +58,28 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 	{
 		if (std::count(line.begin(), line.end(), ' ') != 2)
 			std::cout << "Error: invalid format" << std::endl;
-
-		line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
-
-		if (std::count(line.begin(), line.end(), '|') != 1)
-			std::cout << "Error: invalid format" << std::endl;
 		else
 		{
-			std::string	date = line.substr(0, line.find('|'));
-			std::string	valueStr = line.substr(line.find('|') + 1);
-			float		value = std::stof(valueStr);
+			line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
 
-			try
+			if (std::count(line.begin(), line.end(), '|') != 1)
+				std::cout << "Error: invalid format" << std::endl;
+			else
 			{
-				isDateValid(date);
-				isValueValid(valueStr, value);
-				getResult(date, value);
-			}
-			catch(std::exception const &e)
-			{
-				std::cout << e.what() << std::endl;
+				std::string	date = line.substr(0, line.find('|'));
+				std::string	valueStr = line.substr(line.find('|') + 1);
+				float		value = std::stof(valueStr);
+
+				try
+				{
+					isDateValid(date);
+					isValueValid(valueStr, value);
+					getResult(date, value);
+				}
+				catch(std::exception const &e)
+				{
+					std::cout << e.what() << std::endl;
+				}
 			}
 		}
 	}
