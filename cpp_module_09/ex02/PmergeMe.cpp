@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:57 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/14 00:45:08 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/14 00:55:59 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,19 +56,21 @@ void	PmergeMe::sortSequence()
 	std::cout << "Before: ";
 	printSequence();
 
-	time_t vecStart = clock();
+	clock_t	startVec = clock();
 	this->_vec = mergeInsertionSort(this->_vec);
-	double vecElapsedTime = clock() - vecStart;
+	clock_t	endVec = clock();
+	clock_t elapsedTimeVec = endVec - startVec;
 
-	clock_t lstStart = clock();
+	clock_t startLst = clock();
 	this->_lst = mergeInsertionSort(this->_lst);
-	double lstElapsedTime = clock() - lstStart;
+	clock_t endLst = clock();
+	clock_t elapsedTimeLst = endLst - startLst;
 
 	std::cout << "After: ";
 	printSequence();
 
-	printTime(vecElapsedTime, "vector");
-	printTime(lstElapsedTime, "list");
+	printTime(elapsedTimeVec, "vector");
+	printTime(elapsedTimeLst, "list");
 }
 
 void	PmergeMe::printSequence()
