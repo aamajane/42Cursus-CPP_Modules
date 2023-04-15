@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/15 03:20:30 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/15 04:09:27 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ bool	RPN::isOperator(char c)
 
 void	RPN::isExpressionValid(std::string const &str)
 {
+	if (str.empty())
+		throw std::runtime_error("Error");
+
 	_exp = str;
 	_exp.erase(std::remove(_exp.begin(), _exp.end(), ' '), _exp.end());
 
