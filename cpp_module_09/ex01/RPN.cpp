@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/15 04:09:27 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/15 04:13:33 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,24 +69,24 @@ void	RPN::calculateRPN()
 			if (_stack.size() < 2)
 				throw std::runtime_error("Error");
 
-			float	rhs = _stack.top();
+			float	right = _stack.top();
 			_stack.pop();
-			float	lhs = _stack.top();
+			float	left = _stack.top();
 			_stack.pop();
 
 			switch (_exp[i])
 			{
 				case '+':
-					_stack.push(lhs + rhs);
+					_stack.push(left + right);
 					break;
 				case '-':
-					_stack.push(lhs - rhs);
+					_stack.push(left - right);
 					break;
 				case '*':
-					_stack.push(lhs * rhs);
+					_stack.push(left * right);
 					break;
 				case '/':
-					_stack.push(lhs / rhs);
+					_stack.push(left / right);
 					break;
 			}
 		}
