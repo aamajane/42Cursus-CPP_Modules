@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/14 21:49:45 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/15 03:15:45 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,8 @@ void	BitcoinExchange::isDateValid(std::string date)
 
 void	BitcoinExchange::isValueValid(std::string valueStr, float value)
 {
+	std::replace(valueStr.begin(), valueStr.end(), ',', '.');
+
 	for (size_t i = 0; i < valueStr.length(); i++)
 		if (!std::isdigit(valueStr[i]) && valueStr[i] != '.')
 			throw std::runtime_error("Error: invalid value");
