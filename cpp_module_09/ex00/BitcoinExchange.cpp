@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/15 03:39:15 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/15 06:12:23 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ void	BitcoinExchange::processInputFile(std::string fileName)
 				std::count(line.begin(), line.end(), '|') != 1)
 				throw std::runtime_error("Error: invalid format");
 
+			std::replace(line.begin(), line.end(), ',', '.');
+
 			std::string	date = line.substr(0, line.find('|') - 1);
 			std::string	valueStr = line.substr(line.find('|') + 2);
 			float		value = std::stof(valueStr);
@@ -103,8 +105,6 @@ void	BitcoinExchange::isDateValid(std::string date)
 
 void	BitcoinExchange::isValueValid(std::string valueStr, float value)
 {
-	std::replace(valueStr.begin(), valueStr.end(), ',', '.');
-
 	for (size_t i = 0; i < valueStr.length(); i++)
 		if (!std::isdigit(valueStr[i]) && valueStr[i] != '.')
 			throw std::runtime_error("Error: invalid value");
