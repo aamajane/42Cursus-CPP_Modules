@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:48 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/12 22:46:14 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/15 03:20:30 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ RPN::RPN(RPN const &copy)
 
 RPN &RPN::operator=(RPN const &rhs)
 {
-	this->_exp = rhs._exp;
-	this->_stack = rhs._stack;
+	_exp = rhs._exp;
+	_stack = rhs._stack;
 	return *this;
 }
 
