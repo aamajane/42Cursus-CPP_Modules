@@ -6,7 +6,7 @@
 /*   By: aamajane <aamajane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:59:28 by aamajane          #+#    #+#             */
-/*   Updated: 2023/04/15 03:18:55 by aamajane         ###   ########.fr       */
+/*   Updated: 2023/04/15 03:19:35 by aamajane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ BitcoinExchange::BitcoinExchange(BitcoinExchange const &copy)
 
 BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &rhs)
 {
-	this->_database = rhs._database;
+	_database = rhs._database;
 	return *this;
 }
 
@@ -41,7 +41,7 @@ void	BitcoinExchange::readDatabase(std::string fileName)
 		std::string	date = line.substr(0, line.find(','));
 		float		price = std::stof(line.substr(line.find(',') + 1));
 
-		this->_database[date] = price;
+		_database[date] = price;
 	}
 
 	file.close();
@@ -96,7 +96,7 @@ void	BitcoinExchange::isDateValid(std::string date)
 	int	month = std::stoi(date.substr(date.find('-') + 1, date.rfind('-')));
 	int	day = std::stoi(date.substr(date.rfind('-') + 1));
 
-	if (date < this->_database.begin()->first || year < 2009 
+	if (date < _database.begin()->first || year < 2009 
 		|| month < 1 || month > 12 || day < 1 || day > 31)
 		throw std::runtime_error("Error: invalid date");
 }
@@ -119,7 +119,7 @@ void	BitcoinExchange::isValueValid(std::string valueStr, float value)
 void	BitcoinExchange::getResult(std::string date, float value)
 {
 	std::map<std::string, float>::iterator	itlow;
-	itlow = this->_database.lower_bound(date);
+	itlow = _database.lower_bound(date);
 
 	if (itlow->first != date)
 		itlow--;
